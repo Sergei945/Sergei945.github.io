@@ -8,9 +8,11 @@ h2 {
 }
 
 nav {
+    position: fixed;
     width: 100%;
     height: 60px;
     background-color: #344051;
+    z-index: 5;
 }
 
 .logo {
@@ -19,8 +21,30 @@ nav {
     line-height: 60px;
     padding-left: 388px;
     float: left;
-}
+    animation: comming 5s ease forwards;
+    z-index: 5;
 
+}
+main {
+    height: 100%;
+    width: 100%;
+}
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border: 16px solid #f3f3f3; /* Светло серый */
+    border-top: 16px solid #323d4f; /* Синий */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 5s linear forwards;
+    z-index: 7;
+    
+    
+  }
 .menu {
     float: left;
     padding-left: 432px;
@@ -34,13 +58,51 @@ nav {
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
-
+    opacity: 0;
+    animation: topshift 0.4s 5s ease forwards;
+    
+    
 }
+.menu li a {
+    display: inline-block;
+    transition: all 0.1s;
+    color: white;
+    transform: scale(1);
+}
+
+.menu li a:visited{
+    color: white;
+}
+.menu li a:hover {
+    color: #f08d0d;
+    
+}
+.menu li a:active {
+    transform: scale(1.1);
+}
+.menu li:nth-child(2) {
+    animation-delay: 5.4s;
+}
+.menu li:nth-child(3) {
+    animation-delay: 5.8s;
+}
+.menu li:nth-child(4) {
+    animation-delay: 6.2s;
+}
+.menu li:nth-child(5) {
+    animation-delay: 6.6s;
+}
+.menu li:nth-child(6) {
+    animation-delay: 7s;
+}
+
 
 .main {
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;    
     background: url("../img/person.png") no-repeat 90% 100% / auto 85%, url("../img/phone.jpg") center/cover no-repeat;
+    opacity: 0;
+    animation: img 2s 5s ease forwards;
 }
 
 .title_container {
@@ -48,6 +110,9 @@ nav {
     margin: 432px 0px 0px 404px;
     color: #3c384a;
     text-align: center;
+   animation: titleMove 1s 7.4s ease forwards;
+   opacity: 0;
+
 }
 
 .title_container h1 {
@@ -64,13 +129,22 @@ nav {
 .title_container input {
     height: 40px;
     text-align: center;
-    border: 2px solid #6d7682;
+    border: 2px solid #323d4f;
     background: none;
     border-radius: 5px;
-    color: #6d7682;
+    color: #323d4f;
     font-size: 13px;
     padding: 0 16px;
     margin: 58px 14px 0px 14px;
+    transition: all 0.1s;
+    transform: scale(1);
+}
+.title_container input:hover {
+     background-color: #323d4f;
+     color: white;
+}
+.title_container input:active {
+    transform: scale(1.1);
 }
 
 .about_me {
@@ -90,10 +164,16 @@ nav {
 }
 
 .about_me .photo_about_me {
+    transform: scale(1);
+    transition: all 1.8s ease-in-out;
     margin-left: 870px;
     width: 220px;
     height: 220px;
     margin-bottom: 30px;
+}
+.about_me .photo_about_me:hover {
+    transform: scale(1.2);
+    transition: all 0.8s ease-in-out;
 }
 
 .about_me .text_center {
@@ -118,6 +198,10 @@ nav {
     font-size: 16px;
     color: #6f707e;
 }
+.about_me a:hover {
+    color: white;
+    background-color: #6f707e;
+}
 
 .about_me a img {
     margin: 0;
@@ -125,6 +209,7 @@ nav {
     width: 16px;
     height: 16px;
 }
+
 
 .iCanDo {
     background: url("../img/phoneCanIDo.jpg") no-repeat center / cover;
@@ -227,6 +312,13 @@ nav {
     font-size: 15px;
     margin-top: 25px;
 }
+.case_container a:hover {
+    background-color: white;
+    color: #63b5ae;
+    border: 2px #63b5ae solid;
+    margin-top: 23px;
+    margin-bottom: -2px;
+}
 
 .project {
     position: relative;
@@ -297,9 +389,14 @@ nav {
 }
 
 .statistic {
-    width 100%;
+    width: 100%;
     height: 500px;
     background: url(../img/phoneStatick.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+    /*  */
+}
+.statistic .wrapper {
+    height: 100vh;
 }
 
 .statistic h2 {
@@ -426,6 +523,12 @@ nav {
     font-size: 20px;
     margin-bottom: 70px;
 }
+.submit:hover {
+    
+    background-color: #d17700;
+    border: 2px #d17700 solid
+
+}
 .socials {
     display: flex;
     justify-content: space-between;
@@ -439,6 +542,68 @@ footer {
     text-align: center;
     padding-top: 40px;
 }
+
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes topshift{
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes titleMove{
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 404px;
+    }
+}
+@keyframes imgMove{
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 808px;
+    }
+}
+@keyframes img {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
+@keyframes spin {
+    0% { transform: rotate(0deg);
+    opacity: 1; }
+    100% { transform: rotate(360deg);
+            opacity: 0; }
+  }
+
+@keyframes display {
+    0% { }
+    100% {display: none; }
+}
+
+
+
 
 
 
