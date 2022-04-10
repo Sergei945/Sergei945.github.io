@@ -106,13 +106,10 @@ main {
 }
 
 .title_container {
-    float: left;
-    margin: 432px 0px 0px 404px;
     color: #3c384a;
     text-align: center;
-   animation: titleMove 1s 7.4s ease forwards;
-   opacity: 0;
-
+   /* animation: titleMove 1s 7.4s ease forwards; */
+   opacity: 1;
 }
 
 .title_container h1 {

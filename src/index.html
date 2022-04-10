@@ -10,84 +10,162 @@
     <meta property="og:title" content="Это моя перва страница">
 
     <title>Андрей Браун - Веб разработчик</title>
+
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">Андрей Браун</div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">ОБО МНЕ</a></li>
-                    <li><a href="#">УСЛУГИ</a></li>
-                    <li><a href="#">КЕЙСЫ</a></li>
-                    <li><a href="#">ПРАЙС</a></li>
-                    <li><a href="#">ОТЗЫВЫ</a></li>
-                    <li><a href="#">КОНТАКТЫ</a></li>
-                </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-2
+                            col-xl-3
+                            col-lg-3
+                            col-7">
+                        <div class="logo">Андрей Браун</div>
+                    </div>
+                    <div class="offset-xxl-4 col-xxl-6   
+                            offset-xl-2 col-xl-7
+                            offset-lg-1 col-lg-8
+                            d-none d-lg-block
+                            px-0
+                            ">
+                        <!-- d-md-block
+                               dysplay - контрольная точка - блокировка.
+                            d-none d-lg-block - при достяжении размера md убери отображение данной штуки  -->
+                        <div class="menu ">
+                            <ul class="p-0 m-0">
+                                <li><a href="#">ОБО МНЕ</a></li>
+                                <li><a href="#">УСЛУГИ</a></li>
+                                <li><a href="#">КЕЙСЫ</a></li>
+                                <li><a href="#">ПРАЙС</a></li>
+                                <li><a href="#">ОТЗЫВЫ</a></li>
+                                <li><a href="#">КОНТАКТЫ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-5 
+                    d-flex 
+                    d-lg-none
+                    flex-column
+                    justify-content-center
+                    align-items-end">
+                        <!-- d-flex - появись сразу
+                         d-lg-none - на расширении выше lg выключись
+                         flex-column - меняем направление ее оси 
+                         justify-content-center - выстраиваем ее в этих пределах по центру
+                        align-items-end - прижали к правой стороне контейнера -->
+                        <div class="dropdown">
+                            <a class="btn btn btn-outline-secondary dropdown-toggle white-btn" href="#" role="button"
+                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Навигация
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">ОБО МНЕ</a></li>
+                                <li><a class="dropdown-item" href="#">УСЛУГИ</a></li>
+                                <li><a class="dropdown-item" href="#">КЕЙСЫ</a></li>
+                                <li><a class="dropdown-item" href="#">ПРАЙС</a></li>
+                                <li><a class="dropdown-item" href="#">ОТЗЫВЫ</a></li>
+                                <li><a class="dropdown-item" href="#">КОНТАКТЫ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </nav>
         <div class="loader"></div>
     </header>
 
     <main>
-        <section class="main">
-           
-            <div class="title_container">
+        <section class="main h-100">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <!-- Если текст идёт по бараде и не выравнивается надо задать 100 процентов высоты контейнеру и строке -->
+                    <div class="col-lg-6 mt-5 pt-5">
+                        <div class="title_container mt-5">
+                            <h1>Привет <br> Я Андрей Браун</h1>
+                            <h4>Фулл стек веб-разработчик</h4>
+                            <input type="submit" value="Обо мне">
+                            <input type="submit" value="Мои работы">
+                        </div>
+                    </div>
 
-                <h1>Привет <br> Я Андрей Браун</h1>
-                <h4>Фулл стек веб-разработчик</h4>
-                <input type="submit" value="Обо мне">
-                <input type="submit" value="Мои работы">
+                </div>
             </div>
-           
         </section>
 
         <section class="about_me">
-            <h2>ОБО МНЕ</h2>
-            <p class="border_line"></p>
-            <img class="photo_about_me" src="img/photo_about_me.png" alt="фото обо мне">
-            <div class="text_center">
-                <p class="one_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
-                    ornare diam. Sed commodo
-                    nibh ante <br> facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo
-                    nibh.</p>
-                <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed
-                    commodo
-                    nibh ante <br>
-                    facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-            </div>
-            <div class="submit_download">
-                <a class="" href="#" download><img src="img/icon_about_me.png" alt="иконка скачивания">Скачать
-                    резюме</a>
-            </div>
+            <div class="container">
 
+                <div class="row">
+                    <div class="col d-flex
+                     text_center flex-column align-items-center">
+                        <h2 class="">ОБО МНЕ</h2>
+                        <img src="img/cherta_zagolovka_194 (1).png" alt="">
+                        <img class="photo_about_me" src="img/photo_about_me.png" alt="фото обо мне">
+                        <p class="one_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus
+                            leo
+                            nec
+                            ornare diam. Sed commodo
+                            nibh ante <br> facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
+                            commodo
+                            nibh.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                            diam.
+                            Sed
+                            commodo
+                            nibh ante <br>
+                            facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                        <a class="" href="#" download><img src="img/icon_about_me.png" alt="иконка скачивания">Скачать
+                            резюме</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="iCanDo">
-            <h2>ЧТО Я УМЕЮ</h2>
-            <p class="border_line"></p>
-            <div class="iCanDo_panel">
-                <div class="web_design">
-                    <img src="img/laptop.png" alt="Картинка ноутбука">
-                    <h3>Веб-дизайн</h3>
-                    <p>Lorem ipsum dolor sit amet placerat
-                        facilisis felis mi in tempus eleifend
-                        pellentesque natoque etiam. </p>
+            <div class="container">
+                <div class="row">
+                    <h2>ЧТО Я УМЕЮ</h2>
                 </div>
-                <div class="">
-                    <div class="develop ">
+
+                <!-- <img src="img/iCanDoLine.png" alt=""> -->
+
+                <div class="row iCanDo_panel d-flex justify-content-space-around">
+                    <div class="col-xxl-3   
+                    col-lg-6
+                    col-md-12
+                    px-0 panel">
+                        <img src="img/laptop.png" alt="Картинка ноутбука">
+                        <h3>Веб-дизайн</h3>
+                        <p>Lorem ipsum dolor sit amet placerat
+                            facilisis felis mi in tempus eleifend
+                            pellentesque natoque etiam. </p>
+                    </div>
+
+
+                    <div class="col-xxl-3    
+                    col-lg-6
+                    col-md-12
+                    px-0 panel">
                         <img src="img/sign.png" alt="Картинка знака">
                         <h3>Разработка</h3>
-                        <p>Lorem ipsum dolor sit amet placerat
+                        <p class="">Lorem ipsum dolor sit amet placerat
                             facilisis mi in tempus eleifend
                             pellentesque.</p>
                     </div>
 
-                    <div class="seo_optimization">
+                    <div class="col-xxl-3   
+                    col-lg-6
+                    col-md-12
+                    px-0 panel">
                         <img src="img/rocket.png" alt="Картинка ракеты">
                         <h3>СЕО-Оптимизация</h3>
                         <p>Lorem ipsum dolor sit amet placerat
@@ -95,14 +173,21 @@
                             pellentesque natoque etiam.</p>
                     </div>
 
-                    <div class="marketing ">
+                    <div class="col-xxl-3   
+                    col-lg-6
+                    col-md-12
+                    px-0 panel">
                         <img src="img/gramophone.png" alt="Картинка грамофона">
                         <h3>Маркетинг</h3>
                         <p>Lorem ipsum dolor sit amet placerat
                             facilisis felis mi in tempus eleifend
                             pellentesque natoque .</p>
+
                     </div>
                 </div>
+
+            </div>
+
 
             </div>
         </section>
@@ -171,37 +256,37 @@
 
         <section class="statistic">
             <div class="wrapper">
-            <h2>НЕМНОГО СТАТИСТИКИ</h2>
-            <p class="border_line"></p>
+                <h2>НЕМНОГО СТАТИСТИКИ</h2>
+                <p class="border_line"></p>
 
-            <div class="container_statistic">
-                <div class="happy_clients container">
-                    <img src="img/smile.png" alt="картинка смайлик">
-                    <div class="quentity_clietnts">120</div>
-                    <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
-                </div>
+                <div class="container_statistic">
+                    <div class="happy_clients container">
+                        <img src="img/smile.png" alt="картинка смайлик">
+                        <div class="quentity_clietnts">120</div>
+                        <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
+                    </div>
 
-                <div class="hours_work container">
-                    <img src="img/signStatick.png" alt="картинка знака">
+                    <div class="hours_work container">
+                        <img src="img/signStatick.png" alt="картинка знака">
 
-                    <div class="quentity_hours">4,600</div>
-                    <p>ЧАСОВ РАБОТЫ</p>
-                </div>
+                        <div class="quentity_hours">4,600</div>
+                        <p>ЧАСОВ РАБОТЫ</p>
+                    </div>
 
-                <div class="projects_finish container">
-                    <img src="img/checkMark.png" alt="картинка галочки">
+                    <div class="projects_finish container">
+                        <img src="img/checkMark.png" alt="картинка галочки">
 
-                    <div class="quentity_projects">340</div>
-                    <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
-                </div>
+                        <div class="quentity_projects">340</div>
+                        <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
+                    </div>
 
-                <div class="awards container container">
-                    <img src="img/cup.png" alt="картинка кубка">
-                    <div class="quentity_awards">23</div>
-                    <p>НАГРАД ПОЛУЧЕНО</p>
+                    <div class="awards container container">
+                        <img src="img/cup.png" alt="картинка кубка">
+                        <div class="quentity_awards">23</div>
+                        <p>НАГРАД ПОЛУЧЕНО</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
 
         <section class="feedback">
@@ -255,12 +340,12 @@
         <section class="geolacation">
             <!--        Геолакация могу конечно вставить картинку, но наверняка она как-то через js подключаться будет-->
         </section>
-    
-    <footer>
-        <div class="copyright_text">Copyright © 2021 Андрей Браун. Design by Web</div>
-    </footer>
-</main>
 
+        <footer>
+            <div class="copyright_text">Copyright © 2021 Андрей Браун. Design by Web</div>
+        </footer>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 
 
