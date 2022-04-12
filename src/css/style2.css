@@ -3,8 +3,12 @@ body {
 }
 
 h2 {
+  font-family: 'Franklin Gothic';
   font-size: 33px;
   color: #323d4f;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-weight: 500;
 }
 
 
@@ -78,6 +82,7 @@ main {
   text-align: center;
  /* animation: titleMove 1s 7.4s ease forwards; */
  opacity: 1;
+ /* padding-bottom: 300px; */
 }
 .title_container h1 {
   font-size: 72px;
@@ -88,6 +93,15 @@ main {
   font-size: 22px;
   color: #79818d;
   margin-top: 40px;
+}
+.btn_download {
+  text-align: center;
+  padding-top: 10px;
+  width: 157px;
+  height: 34px;
+  border: 1.6px solid #6f7180;
+  border-radius: 6px;
+  margin-bottom: 100px;
 }
 
 .title_container input {
@@ -135,10 +149,7 @@ main {
     border: 2px solid white;
   }
 }
-.about_me h2 {
-  margin-top: 100px;
-  margin-bottom: 30px;
-}
+
 .about_me .photo_about_me {
   margin-top: 50px;
   margin-bottom: 20px;
@@ -146,46 +157,224 @@ main {
 .submit_download {
   text-align: center;
 }
-.iCanDo_panel {
-  text-align: center;
-  margin-top: 100px;
+.iCanDo {
+  background: url("../img/phoneCanIDo.jpg") no-repeat center/ cover;
 }
-.iCanDo h2 {
+
+.iCanDo_panel {
+ 
+  display: flex;
+  justify-content: space-around;
+  
   text-align: center;
   margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+.iCanDo .panel {
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  width: 300px;
+
+}
+.iCanDo .panel img {
+  width: 60px;
+  height: 55px;
 }
 .iCanDo .panel p {
   display: block;
-  padding: 0 40px;
-  margin-top: 12px;
   font-family: Calibri;
   font-size: 16px;
   font-weight: 400;
   color: #38475a;
+  width: 250px;
 }
 .iCanDo .panel h3 {
   font-family: Bahnschrift;
   font-size: 18.6px;
   font-weight: 600;
   color: #e87700;
+  
 }
-.iCanDo .panel img {
+
+.case p {
+  font-size: 16.7px;
+  font-weight: 400;
+  color: #38475a;
+}
+.case .case_text {
+  margin-top: 35px;
+  margin-bottom: 50px; 
+}
+
+.case .font-size {
+  font-size: 20.9px;
+}
+.case h3 {
+  font-family: 'Franklin Gothic';
+  font-size: 25px;
+  font-weight: 500;
+  color: #2f4154;
+}
+.case_container {
+  margin-top: 45px;
+}
+.case .case_btn {
+  border-radius: 5px;
+  width: 200px;
+  max-width: 200px;
+  font-family: 'Myriad Pro';
+  font-size: 20.9px;
+  font-weight: 400;
+  height: 44px;
+  background-color: #00b6af;
+}
+.case .case_btn:hover {
+  background-color: white;
+  color: #f38750;
+  border-color: #f38750;
+}
+@media (max-width: 991px) {
+  .case .project  {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .case .case_btn {
+    margin-top: 30px;
+    width: 100px;
+    margin-bottom: 160px;
+    
+  }
+  .case_container {
+    text-align: center;
+    align-items:center;
+  }
+  .project {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.calculation_price h3 {
+  font-size: 29px;
+
+  margin-top: 60px;
+}  
+.calculation_price select {
+  margin-top: 20px;
+
+  height: 55px;
+  background: #eeeeee;
+  font-size: 16px;
+
+}
+.price {
+  margin-top: 15px;
+}
+
+
+.term_сost div {
+  margin-top: 30px;
+  font-size: 29px;
+}
+
+.term_сost p .cost {
+  font-size: 29px;
+}
+
+.statistic {
+  width: 100%;
+  min-height: 500px;
+  background: url(../img/phoneStatick.jpg) no-repeat center / cover;
+  background-attachment: fixed;
+  /*  */
+}
+.statick_line {
+  margin-bottom: 90px;
+}
+.statick_block {
   margin-bottom: 30px;
 }
 
-
-@media (max-width: 991px) {
-  .iCanDo_panel p {
-    margin: 0 200px;
-  }
-  .iCanDo .panel {
-    margin-bottom: 40px;
-  }
+.statick_block div {
+  font-size: 38px;
+  font-weight: bold;
+  color: #323d4f;
 
 }
-@media (max-width: 1400px) and (min-width: 991px) {
-  .iCanDo .panel p {
-    padding: 0 120px;
-  }
-} 
+.statick_block p {
+  margin-top: 27px;
+  font-size: 16px;
+  color: #323d4f;
+}
+
+.my_contacts {
+  width: 100%;
+  min-height: 885px;
+  background: url(../img/phoneMyContacts.jpg) no-repeat center / cover;
+  color: white;
+  text-align: center;
+}
+.my_contacts h2 {
+  color: white; 
+  
+}
+.my_contacts h3 {
+  font-size: 20px;
+  margin-bottom: 45px;
+}
+.my_contacts form {
+  margin-right: 590px; 
+  margin-left: 595px;
+  display: flex;
+  flex-flow: row wrap;
+  opacity: 0.7;
+}
+.name, .email {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 16px;
+  
+}
+.message {
+  width: 100%;
+  height: 95px;
+  margin-bottom: 28px;
+}
+.email, .name, .message {
+  padding-left: 15px;
+}
+.message {
+  padding-top: 10px;
+}
+.submit {
+  color: white;
+  border: 2px white solid;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit:hover {
+  background-color: #d17700;
+  border: 2px #d17700 solid
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  height: 90px;
+  background: #354051;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  font-family: Arial;
+  font-size: 13.3px;  
+  font-weight: 400;
+}
+
 
