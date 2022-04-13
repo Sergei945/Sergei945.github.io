@@ -488,12 +488,10 @@ main {
     
 }
 .my_contacts form {
-    margin-right: 590px; 
-    margin-left: 595px;
+
     display: flex;
     flex-flow: row wrap;
     opacity: 0.7;
-    
 }
 
 .email, .name, .message {
@@ -521,10 +519,8 @@ main {
     margin-bottom: 70px;
 }
 .submit:hover {
-    
     background-color: #d17700;
     border: 2px #d17700 solid
-
 }
 .socials {
     display: flex;
