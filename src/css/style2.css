@@ -245,8 +245,7 @@ main {
   .case .case_btn {
     margin-top: 30px;
     width: 100px;
-    margin-bottom: 160px;
-    
+    margin-bottom: 30px;
   }
   .case_container {
     text-align: center;
@@ -261,7 +260,6 @@ main {
 }
 .calculation_price h3 {
   font-size: 29px;
-
   margin-top: 60px;
 }  
 .calculation_price select {
@@ -346,7 +344,7 @@ main {
   margin-bottom: 28px;
 }
 .email, .name, .message {
-  padding-left: 15px;
+  /* padding-left: 15px; */
 }
 .message {
   padding-top: 10px;

@@ -519,10 +519,8 @@ main {
     margin-bottom: 70px;
 }
 .submit:hover {
-    
     background-color: #d17700;
     border: 2px #d17700 solid
-
 }
 .socials {
     display: flex;
