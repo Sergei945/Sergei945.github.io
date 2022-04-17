@@ -62,7 +62,6 @@ function calculationPrice() {
                         objectArraysKeys.arrTypeKeys[type - 1]
                     ]}
                     Перейдём к выбору дизайна`);
-            alert(calculationSite.typeSite[objectArraysKeys.arrTypeKeys[type - 1]]);
         } else if (type.toLowerCase() in calculationSite.typeSite) {
             finalPrice += calculationSite.typeSite[type.toLowerCase()];
             price.clientType = type.toLowerCase();
@@ -95,7 +94,6 @@ function calculationPrice() {
                         ]}
                         На данный момент общая сумма проекта: ${finalPrice}
                         П1ерейдём к выбору адаптива`);
-            console.log(typeof calculationSite.design[objectArraysKeys.arrDesignKeys[design - 1]]);
         } else if (design.toLowerCase() in calculationSite.design) {
             1;
             finalPrice += calculationSite.design[design.toLowerCase()];
