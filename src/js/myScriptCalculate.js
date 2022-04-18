@@ -115,8 +115,6 @@ function calculationPrice() {
             `Какой адаптив сайта вы желаете? 
             1. ${objectArraysKeys.arrAdaptiveKeys[0]}
             2. ${objectArraysKeys.arrAdaptiveKeys[1]} 
-            3. ${objectArraysKeys.arrAdaptiveKeys[2]} 
-            4. ${objectArraysKeys.arrAdaptiveKeys[3]} 
                                             Введит название или номер`,
             'с адаптивом'
         );
