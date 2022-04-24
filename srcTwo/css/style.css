@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+html {
+    font-family: 'Roboto', sans-serif;
+}
+.promo {
+    min-height: 802px;
+    background: url(../img/bg/main_bg.jpg) center center / cover no-repeat;
+    padding-top: 38px;
+    padding-bottom: 62px;
+    /* cперва идёт url потом позиция картинки центр центр например по осям потом cover это растянуть картинку по макету если она маленькая и без повтарений */
+
+    /* между свойствами позиции и размера нужно поставить слеш, чтобы всё по пизде не пошло */
+}
+
+.main {
+    text-align: center;
+}
+
+.main .text_logo {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+.main h1, .title {
+    /* margin-bottom: 20px; */
+    font-weight: 900;
+    font-size: 41px;
+    /* identical to box height, or 100% */
+    color: #F9BF3B;
+    text-transform: uppercase;
+}
+.main .promo_text {
+    margin-top: 20px;
+
+    font-weight: 300;
+    font-size: 21px;
+    /* or 133% */
+    color: #FFFFFF;
+    line-height: 28px;
+}
+.main .promo_text span {
+    font-weight: 700;
+    font-size: 21px;
+    color: #F9BF3B;
+}
+.main .easy {
+    font-weight: 900;
+    font-size: 80px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.main button {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 313px;
+    height: 72px;
+    background: linear-gradient(0deg, #2798B9 0%, #3AB6DA 100%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    font-family: 'RobotoCondensed';
+    font-size: 21px;
+    /* identical to box height, or 114% */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    /* свойство смены курсора  */
+}
+.main button:hover {
+    background: linear-gradient(0deg, #F9BF3B 0%, #a37d24 100%);
+    color: black;
+}
+
+.main .text_more {
+    font-weight: 100;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}
+.waiting {
+    padding-top: 85px;
+    padding-bottom: 75px;
+    min-height: 607px;
+    background: #EFEFEF;
+    text-align: center;
+}
+.waiting h2 {
+    font-weight: 400;
+    font-size: 30px;
+    /* or 100% */
+    text-transform: uppercase;
+    color: #252525;
+}
+.waiting_line {
+    margin: 0 auto;
+    margin-top: 19px;
+    width: 220px;
+    height: 7px;
+    text-align: center;
+    background: #F9BF3B;
+}
+.waiting h3 {
+    margin-top: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    /* identical to box height, or 87% */
+    color: #4A4A4A;
+    }
+.waiting .waiting_box_text {
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+}
+.waiting img {
+   width: 100%;
+}
+.optimization {
+    padding-top: 108px;
+    padding-bottom: 74px;
+    min-height: 550px;
+    background: url('../img/bg/woman_bg.png') left bottom / 868px 502px no-repeat;
+    
+}
+.optimization h2 {
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #299CBD;
+}
+
+.optimization .optimization_text {
+    margin-top: 15px;
+
+
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 27px;
+    color: #4A4A4A;
+}
+.optimization .optimization_text p {
+    margin-top: 15px;
+}
+.finish {
+    min-height: 450px;
+    padding-top: 86px;
+    padding-bottom: 70px;
+    background: url("../img/bg/second_bg.png") center center / cover no-repeat ;
+}
+
+
+.finish h2 {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    /* or 100% */
+    text-transform: uppercase;
+
+    color: #EFEFEF;
+}
+.finish .finish_line {
+    margin: 0 auto;
+    margin-top: 18px;
+    width: 220px;
+    height: 7px;
+    left: 851px;
+    top: 130px;
+    background: #F9BF3B;
+}
+
+.finish .finish_flex_box {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.finish .finish_box {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.finish .finish_box .finish_img {
+    width: 118px;
+    height: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #B4E2FF;
+    border-radius: 50%;
+    text-align: center;
+} 
+.finish .finish_box .finish_text {
+    text-align: center;
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+/* or 118% */
+    color: #EFEFEF;
+}
+
+.gift {
+    padding-top: 85px;
+    padding-bottom: 88px;
+    min-height: 630px;
+    background: #EFEFEF;
+    text-align: center;
+}
+.gift .gift_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    color: #252525;
+}
+.gift .gift_btn {
+    margin-top: 51px;
+    width: 313px;
+    height: 72px;
+    left: 805px;
+    top: 471px;
+
+    background: linear-gradient(0deg, #2798B9 0%, #3AB6DA 100%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+    font-size: 21px;
+    /* identical to box height, or 114% */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.22);
+}
+
+.gift .gift_btn:hover {
+    background: linear-gradient(0deg, #F9BF3B 0%, #a37d24 100%);
+    color: black;
+    cursor: pointer;
+}
+.first {
+    min-height: 512px;
+    padding-top: 85px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.first h2 {
+    font-weight: 400;
+    font-size: 30px;
+    /* identical to box height, or 100% */
+    text-transform: uppercase;
+    margin-top: 36px;
+    color: #252525;
+}
+.first .time {
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: 36px;
+/* or 100% */
+    text-transform: uppercase;
+    color: #299CBD;
+}
+.first .place {
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 20px;
+    /* identical to box height, or 87% */
+    color: #4A4A4A;
+}
+
+footer {
+    min-height: 169px;
+    background: #1A1A1A;
+    padding-top: 57px;
+    padding-bottom: 69px;
+    text-align: center;
+}
+footer .text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    /* or 140% */
+
+    color: #888888;
+}
+footer .text a {
+    color: #888888;
+}
+footer .text a:hover {
+    color: #F9BF3B;
+}
