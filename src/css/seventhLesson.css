@@ -1,0 +1,22 @@
+.box {
+    border: 2px solid black;
+}
+
+html {
+    /* scroll-behavior: smooth; */
+    /* делаем плавный скрол */
+}
+:target {
+    /* scroll-margin-top: 20px; */
+    /* тоже самое со scroll что и в jquery только в css 
+    меняем расстояние точки скрола 
+    (не все браузеры поддерживают)*/
+}
+
+.element-animation {
+    opacity: 0;
+}
+.element-animation.show-animation {
+    opacity: 1;
+    transition: opacity 1s;
+}
