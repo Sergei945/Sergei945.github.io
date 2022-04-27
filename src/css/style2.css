@@ -44,6 +44,9 @@ nav .menu a {
   font-size: 13px;
   color: white;
 }
+nav .menu .active {
+  color: #f08d0d;
+}
 .menu li a:visited{
   color: white;
 }

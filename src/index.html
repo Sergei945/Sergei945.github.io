@@ -6,613 +6,471 @@
     <meta name="description" content="Это моя перва страница">
     <meta name="author" content="Andrey">
     <meta name="keywords" content="сайт, визитка, разработчик сайтов">
-    <!--    не используется устарел-->
     <meta name="robots" content="index, follow">
-
-    <!--    если надо чтобы страница индексировалась роботом пишем index если не надо то no index например если это админ панель 
-   если надо чтобы при индексировании робот не следовал по ссылкам no follow и follow чтобы наоборот робот проверял ссылки
-   
-   если надо и index и follow можно написать просто all 
-   -->
-
     <meta property="og:title" content="Это моя перва страница">
-    <!--   open graph - микроразметка используется для соц сетей это мини виджет или маленький текст в соц. сетях или еще где-то для показывания рекламы как бы текст под рекламой-->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/seventhLesson.css">
-    <link rel="stylesheet" href="css/animate.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андрей Браун - Веб разработчик</title>
 
-    <title>Урок 7 css</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-2
+                            col-xl-3
+                            col-lg-3
+                            col-7">
+                        <div class="logo">Андрей Браун</div>
+                    </div>
+                    <div class="offset-xxl-4 col-xxl-6   
+                            offset-xl-2 col-xl-7
+                            offset-lg-1 col-lg-8
+                            d-none d-lg-block
+                            px-0
+                            ">
+                        <!-- d-md-block
+                               dysplay - контрольная точка - блокировка.
+                            d-none d-lg-block - при достяжении размера md убери отображение данной штуки  -->
+                        <div class="menu ">
+                            <ul class="p-0 m-0">
+                                <li><a href="#about">ОБО МНЕ</a></li>
+                                <li><a href="#iCanDo-Scroll">УСЛУГИ</a></li>
+                                <li><a href="#case_scroll">КЕЙСЫ</a></li>
+                                <li><a href="#calculate">ПРАЙС</a></li>
+                                <li><a href="#feedback_scroll">ОТЗЫВЫ</a></li>
+                                <li><a href="#my_contacts_scroll">КОНТАКТЫ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-5 
+                    d-flex 
+                    d-lg-none
+                    flex-column
+                    justify-content-center
+                    align-items-end">
+                        <!-- d-flex - появись сразу
+                         d-lg-none - на расширении выше lg выключись
+                         flex-column - меняем направление ее оси 
+                         justify-content-center - выстраиваем ее в этих пределах по центру
+                        align-items-end - прижали к правой стороне контейнера -->
+                        <div class="dropdown">
+                            <a class="btn btn btn-outline-secondary dropdown-toggle white-btn" href="#" role="button"
+                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Навигация
+                            </a>
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <!-- Чтобы зафиксировать навбар использовали класс fixed-top -->
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                        <!-- класс active отвечает за активный элемент навбара -->
-                        <!-- в href="#name" добавляет id куда требуется произвести скролл или перемещение 
-                        также это может быть так понимаю страница например или выпадающая штука например 
-                        для регистрации или еще для чего-то
-                     -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#feautures">Feautures</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#pricing">Pricing</a>
-                    </li>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li>
-
-                </ul>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">ОБО МНЕ</a></li>
+                                <li><a class="dropdown-item" href="#">УСЛУГИ</a></li>
+                                <li><a class="dropdown-item" href="#">КЕЙСЫ</a></li>
+                                <li><a class="dropdown-item" href="#">ПРАЙС</a></li>
+                                <li><a class="dropdown-item" href="#">ОТЗЫВЫ</a></li>
+                                <li><a class="dropdown-item" href="#">КОНТАКТЫ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-        </div>
+        </nav>
+    </header>
 
-
-
-    </nav>
-    <div class="section" id="home" name="">
-
-        <div class="container box mt-5">
-            <div class="row text-center m-5">
-                <div class="col">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Launch demo modal
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem veritatis fugiat, quaerat odio possimus nam!
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Закрыть</button>
-                                    <button type="button" class="btn btn-primary">Сохранить</button>
-                                </div>
-                            </div>
+    <main>
+        <section class="main h-100">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <!-- Если текст идёт по бараде и не выравнивается надо задать 100 процентов высоты контейнеру и строке -->
+                    <div class="col-lg-6 mt-5 pt-5">
+                        <div class="title_container mt-5">
+                            <h1>Привет <br> Я Андрей Браун</h1>
+                            <h4>Фулл стек веб-разработчик</h4>
+                            <input type="submit" value="Обо мне">
+                            <input type="submit" value="Мои работы">
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
 
-                    <h2>Home</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quod unde minus quo error vitae.
-                        Dicta explicabo placeat quas voluptatum nobis aliquid! Voluptatum voluptate sint ullam ducimus
-                        provident magnam incidunt nobis sit. Sit, rem voluptas adipisci qui reiciendis facilis earum
-                        eius obcaecati voluptatibus sint ipsum at dolorum odio corrupti unde.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Ducimus similique, ullam quaerat consequuntur vitae non praesentium dolore velit exercitationem
-                        commodi vero ipsum deleniti, nam minus qui, quas nulla. Laboriosam, libero nostrum repellat
-                        beatae magnam maiores quibusdam doloremque eligendi, voluptatibus ab ex, architecto repellendus
-                        dolorum consequatur praesentium officiis quo alias voluptatum error dignissimos. Similique
-                        aliquam modi ipsam illo minus?</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Quibusdam enim iste totam, nulla similique natus pariatur libero in hic corrupti blanditiis,
-                        voluptas consequatur veniam quaerat et dolorum officiis? Minus dolorum officia dolore itaque
-                        voluptates eligendi blanditiis? Perspiciatis officia enim quo expedita autem, atque optio fugiat
-                        quod provident unde asperiores quis consectetur suscipit, itaque fugit dolore facere? Quisquam,
-                        deleniti.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Odit necessitatibus, tenetur earum ducimus id est hic, alias sunt corrupti magnam quod quidem
-                        numquam incidunt quis! Quae ut veritatis quis quo ratione. Labore ex eveniet saepe repellat.
-                        Ipsum eaque inventore iusto eius quae facilis, nihil mollitia voluptas tempore obcaecati nostrum
-                        quibusdam adipisci architecto, aspernatur sed. Natus eveniet corporis molestiae.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Eaque autem illo non at officia aspernatur eligendi quod quibusdam dignissimos blanditiis, quam
-                        corporis. Voluptatem magnam harum dolores ut illum quo vitae est cum, laborum esse blanditiis
-                        accusantium. Quam ipsa, minus tempore vero veniam fuga architecto dolorem perspiciatis. Dolor
-                        magnam odit facere facilis consequuntur? Minima assumenda nulla nostrum repudiandae quo.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Minima tenetur exercitationem esse ducimus explicabo, quisquam corrupti voluptatem quia! Ducimus,
-                        sit ullam. Incidunt officiis velit necessitatibus a odio iusto sequi quo, optio nesciunt!
-                        Asperiores, molestiae deserunt. Accusamus vero nobis minima iusto, quam debitis id. Voluptate
-                        dolorem cum doloribus sit? Recusandae exercitationem reiciendis accusamus animi impedit hic
-                        delectus ab odit?</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Obcaecati cupiditate quae a nulla perferendis! Corporis consequatur ratione earum dolores, dolore
-                        sit, velit similique facilis commodi praesentium eligendi itaque modi quod fugit reiciendis ex
-                        fuga! Quod unde, dolor excepturi numquam ex tenetur blanditiis totam cupiditate sunt laudantium
-                        corrupti nobis itaque vel quidem nemo culpa corporis dolorem autem? Voluptatem, delectus?</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Laudantium eligendi enim quia labore, magnam aliquid obcaecati veritatis placeat numquam
-                        repudiandae laboriosam voluptatem. Architecto ea molestiae sunt nisi. Voluptates, est, officia
-                        quam nobis libero adipisci velit iure, assumenda dicta fugiat hic? Ducimus, iure iste magni,
-                        odio eos aliquam ipsa sint repellendus ipsum sit culpa repudiandae ipsam. Alias, et error.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Hic, iste. Cumque animi quae aperiam velit dolorum repellendus facere, quam obcaecati a neque
-                        blanditiis non aliquid aut. Nihil, expedita nemo aliquid et, ipsum itaque exercitationem
-                        quibusdam architecto nobis iusto fugit libero aspernatur recusandae omnis, ad voluptatem
-                        reiciendis! Quia unde quidem modi at provident porro cum accusamus quae asperiores dignissimos!
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Atque amet dolorum optio quod perferendis consequatur alias, commodi molestias, expedita ad esse
-                        itaque placeat necessitatibus labore sed eius, unde eveniet! Veniam perspiciatis architecto
-                        adipisci suscipit quas cumque aperiam vitae et officia impedit modi deleniti velit unde minus
-                        mollitia magni, non iure iusto est eum! Rem facilis odit ex sunt.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Illo nihil facere perspiciatis provident adipisci, perferendis dignissimos pariatur rerum veniam
-                        cumque accusamus iusto illum praesentium iure culpa voluptatum dolore. Nostrum sunt tempora,
-                        porro fugit necessitatibus fugiat, optio dolore corporis enim aut ipsa reprehenderit dolor error
-                        praesentium harum qui facilis doloribus. Praesentium vel est ipsam, quam corrupti nemo
-                        voluptatibus alias?</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Hic earum, sunt suscipit sint porro quidem labore libero, quam inventore neque optio officiis
-                        quibusdam! Distinctio, ad quos cumque, aperiam praesentium placeat ullam nesciunt in ab rem et
-                        voluptatem iure earum culpa impedit aliquid quae voluptate consectetur, nam dolorum quo quam?
-                        Pariatur dolor magni praesentium sint similique eligendi ut omnis.</p>
-                </div>
-            </div>
+        <section class="about_me" id="about">
+            <div class="container">
 
-            <div class="row">
-                <div class="col">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quod unde minus quo error vitae.
-                        Dicta explicabo placeat quas voluptatum nobis aliquid! Voluptatum voluptate sint ullam ducimus
-                        provident magnam incidunt nobis sit. Sit, rem voluptas adipisci qui reiciendis facilis earum
-                        eius obcaecati voluptatibus sint ipsum at dolorum odio corrupti unde.</p>
+                <div class="row">
+                    <div class="col d-flex
+                        text_center flex-column align-items-center">
+                        <h2 class="">ОБО МНЕ</h2>
+                        <img src="img/cherta_zagolovka_194 (1).png" alt="">
+                        <img class="photo_about_me" src="img/photo_about_me.png" alt="фото обо мне">
+                        <p class="one_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus
+                            leo
+                            nec
+                            ornare diam. Sed commodo
+                            nibh ante <br> facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam
+                            commodo
+                            nibh.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                            diam.
+                            Sed
+                            commodo
+                            nibh ante <br>
+                            facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                        <a class="btn_download" href="#" download><img src="img/icon_about_me.png"
+                                alt="иконка скачивания">Скачать
+                            резюме</a>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <p>Ducimus similique, ullam quaerat consequuntur vitae non praesentium dolore velit exercitationem
-                        commodi vero ipsum deleniti, nam minus qui, quas nulla. Laboriosam, libero nostrum repellat
-                        beatae magnam maiores quibusdam doloremque eligendi, voluptatibus ab ex, architecto repellendus
-                        dolorum consequatur praesentium officiis quo alias voluptatum error dignissimos. Similique
-                        aliquam modi ipsam illo minus?</p>
+        </section>
+
+        <section class="iCanDo" id="iCanDo-Scroll">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col">
+                        <h2>ЧТО Я УМЕЮ</h2>
+                        <img src="img/iCanDoLine.png" alt="">
+
+                    </div>
+
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Quibusdam enim iste totam, nulla similique natus pariatur libero in hic corrupti blanditiis,
-                        voluptas consequatur veniam quaerat et dolorum officiis? Minus dolorum officia dolore itaque
-                        voluptates eligendi blanditiis? Perspiciatis officia enim quo expedita autem, atque optio fugiat
-                        quod provident unde asperiores quis consectetur suscipit, itaque fugit dolore facere? Quisquam,
-                        deleniti.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Odit necessitatibus, tenetur earum ducimus id est hic, alias sunt corrupti magnam quod quidem
-                        numquam incidunt quis! Quae ut veritatis quis quo ratione. Labore ex eveniet saepe repellat.
-                        Ipsum eaque inventore iusto eius quae facilis, nihil mollitia voluptas tempore obcaecati nostrum
-                        quibusdam adipisci architecto, aspernatur sed. Natus eveniet corporis molestiae.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Eaque autem illo non at officia aspernatur eligendi quod quibusdam dignissimos blanditiis, quam
-                        corporis. Voluptatem magnam harum dolores ut illum quo vitae est cum, laborum esse blanditiis
-                        accusantium. Quam ipsa, minus tempore vero veniam fuga architecto dolorem perspiciatis. Dolor
-                        magnam odit facere facilis consequuntur? Minima assumenda nulla nostrum repudiandae quo.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="">Ссылка 1</a>
-                </div>
-            </div>
-        </div>
+                <div class="row iCanDo_panel d-flex justify-content-space-around">
+                    <div class="col-12 
+                    col-sm-6 
+                    col-md-3
+                    px-0 panel">
+                        <img src="img/laptop.png" alt="Картинка ноутбука">
+                        <h3>Веб-дизайн</h3>
+                        <p>Lorem ipsum dolor sit amet placerat
+                            facilisis felis mi in tempus eleifend
+                            pellentesque natoque etiam. </p>
+                    </div>
 
 
-        <div class="section" id="feautures">
-            <div class="container box">
-                <div class="row text-center m-5">
-                    <div class="col">
-                        <h2>Feautures</h2>
+                    <div class="col-12 
+                    col-sm-6 
+                    col-md-3
+                    px-0 panel">
+                        <img src="img/sign.png" alt="Картинка знака">
+                        <h3>Разработка</h3>
+                        <p class="">Lorem ipsum dolor sit amet placerat
+                            facilisis mi in tempus eleifend
+                            pellentesque.</p>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quod unde minus quo error
-                            vitae. Dicta explicabo placeat quas voluptatum nobis aliquid! Voluptatum voluptate sint
-                            ullam ducimus provident magnam incidunt nobis sit. Sit, rem voluptas adipisci qui reiciendis
-                            facilis earum eius obcaecati voluptatibus sint ipsum at dolorum odio corrupti unde.</p>
+
+                    <div class="col-12 
+                    col-sm-6 
+                    col-md-3
+                    px-0 panel">
+                        <img src="img/rocket.png" alt="Картинка ракеты">
+                        <h3>СЕО-Оптимизация</h3>
+                        <p>Lorem ipsum dolor sit amet placerat
+                            facilisis felis mi in tempus eleifend
+                            pellentesque natoque etiam.</p>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Ducimus similique, ullam quaerat consequuntur vitae non praesentium dolore velit
-                            exercitationem commodi vero ipsum deleniti, nam minus qui, quas nulla. Laboriosam, libero
-                            nostrum repellat beatae magnam maiores quibusdam doloremque eligendi, voluptatibus ab ex,
-                            architecto repellendus dolorum consequatur praesentium officiis quo alias voluptatum error
-                            dignissimos. Similique aliquam modi ipsam illo minus?</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Quibusdam enim iste totam, nulla similique natus pariatur libero in hic corrupti blanditiis,
-                            voluptas consequatur veniam quaerat et dolorum officiis? Minus dolorum officia dolore itaque
-                            voluptates eligendi blanditiis? Perspiciatis officia enim quo expedita autem, atque optio
-                            fugiat quod provident unde asperiores quis consectetur suscipit, itaque fugit dolore facere?
-                            Quisquam, deleniti.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Odit necessitatibus, tenetur earum ducimus id est hic, alias sunt corrupti magnam quod quidem
-                            numquam incidunt quis! Quae ut veritatis quis quo ratione. Labore ex eveniet saepe repellat.
-                            Ipsum eaque inventore iusto eius quae facilis, nihil mollitia voluptas tempore obcaecati
-                            nostrum quibusdam adipisci architecto, aspernatur sed. Natus eveniet corporis molestiae.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Eaque autem illo non at officia aspernatur eligendi quod quibusdam dignissimos blanditiis,
-                            quam corporis. Voluptatem magnam harum dolores ut illum quo vitae est cum, laborum esse
-                            blanditiis accusantium. Quam ipsa, minus tempore vero veniam fuga architecto dolorem
-                            perspiciatis. Dolor magnam odit facere facilis consequuntur? Minima assumenda nulla nostrum
-                            repudiandae quo.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Minima tenetur exercitationem esse ducimus explicabo, quisquam corrupti voluptatem quia!
-                            Ducimus, sit ullam. Incidunt officiis velit necessitatibus a odio iusto sequi quo, optio
-                            nesciunt! Asperiores, molestiae deserunt. Accusamus vero nobis minima iusto, quam debitis
-                            id. Voluptate dolorem cum doloribus sit? Recusandae exercitationem reiciendis accusamus
-                            animi impedit hic delectus ab odit?</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Obcaecati cupiditate quae a nulla perferendis! Corporis consequatur ratione earum dolores,
-                            dolore sit, velit similique facilis commodi praesentium eligendi itaque modi quod fugit
-                            reiciendis ex fuga! Quod unde, dolor excepturi numquam ex tenetur blanditiis totam
-                            cupiditate sunt laudantium corrupti nobis itaque vel quidem nemo culpa corporis dolorem
-                            autem? Voluptatem, delectus?</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Laudantium eligendi enim quia labore, magnam aliquid obcaecati veritatis placeat numquam
-                            repudiandae laboriosam voluptatem. Architecto ea molestiae sunt nisi. Voluptates, est,
-                            officia quam nobis libero adipisci velit iure, assumenda dicta fugiat hic? Ducimus, iure
-                            iste magni, odio eos aliquam ipsa sint repellendus ipsum sit culpa repudiandae ipsam. Alias,
-                            et error.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Hic, iste. Cumque animi quae aperiam velit dolorum repellendus facere, quam obcaecati a neque
-                            blanditiis non aliquid aut. Nihil, expedita nemo aliquid et, ipsum itaque exercitationem
-                            quibusdam architecto nobis iusto fugit libero aspernatur recusandae omnis, ad voluptatem
-                            reiciendis! Quia unde quidem modi at provident porro cum accusamus quae asperiores
-                            dignissimos!</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Atque amet dolorum optio quod perferendis consequatur alias, commodi molestias, expedita ad
-                            esse itaque placeat necessitatibus labore sed eius, unde eveniet! Veniam perspiciatis
-                            architecto adipisci suscipit quas cumque aperiam vitae et officia impedit modi deleniti
-                            velit unde minus mollitia magni, non iure iusto est eum! Rem facilis odit ex sunt.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Illo nihil facere perspiciatis provident adipisci, perferendis dignissimos pariatur rerum
-                            veniam cumque accusamus iusto illum praesentium iure culpa voluptatum dolore. Nostrum sunt
-                            tempora, porro fugit necessitatibus fugiat, optio dolore corporis enim aut ipsa
-                            reprehenderit dolor error praesentium harum qui facilis doloribus. Praesentium vel est
-                            ipsam, quam corrupti nemo voluptatibus alias?</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Hic earum, sunt suscipit sint porro quidem labore libero, quam inventore neque optio officiis
-                            quibusdam! Distinctio, ad quos cumque, aperiam praesentium placeat ullam nesciunt in ab rem
-                            et voluptatem iure earum culpa impedit aliquid quae voluptate consectetur, nam dolorum quo
-                            quam? Pariatur dolor magni praesentium sint similique eligendi ut omnis.</p>
+
+                    <div class="col-12 
+                    col-sm-6 
+                    col-md-3
+                    px-0 panel">
+                        <img src="img/gramophone.png" alt="Картинка грамофона">
+                        <h3>Маркетинг</h3>
+                        <p>Lorem ipsum dolor sit amet placerat
+                            facilisis felis mi in tempus eleifend
+                            pellentesque natoque .</p>
+
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quod unde minus quo error
-                            vitae. Dicta explicabo placeat quas voluptatum nobis aliquid! Voluptatum voluptate sint
-                            ullam ducimus provident magnam incidunt nobis sit. Sit, rem voluptas adipisci qui reiciendis
-                            facilis earum eius obcaecati voluptatibus sint ipsum at dolorum odio corrupti unde.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Ducimus similique, ullam quaerat consequuntur vitae non praesentium dolore velit
-                            exercitationem commodi vero ipsum deleniti, nam minus qui, quas nulla. Laboriosam, libero
-                            nostrum repellat beatae magnam maiores quibusdam doloremque eligendi, voluptatibus ab ex,
-                            architecto repellendus dolorum consequatur praesentium officiis quo alias voluptatum error
-                            dignissimos. Similique aliquam modi ipsam illo minus?</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Quibusdam enim iste totam, nulla similique natus pariatur libero in hic corrupti blanditiis,
-                            voluptas consequatur veniam quaerat et dolorum officiis? Minus dolorum officia dolore itaque
-                            voluptates eligendi blanditiis? Perspiciatis officia enim quo expedita autem, atque optio
-                            fugiat quod provident unde asperiores quis consectetur suscipit, itaque fugit dolore facere?
-                            Quisquam, deleniti.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Odit necessitatibus, tenetur earum ducimus id est hic, alias sunt corrupti magnam quod quidem
-                            numquam incidunt quis! Quae ut veritatis quis quo ratione. Labore ex eveniet saepe repellat.
-                            Ipsum eaque inventore iusto eius quae facilis, nihil mollitia voluptas tempore obcaecati
-                            nostrum quibusdam adipisci architecto, aspernatur sed. Natus eveniet corporis molestiae.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Eaque autem illo non at officia aspernatur eligendi quod quibusdam dignissimos blanditiis,
-                            quam corporis. Voluptatem magnam harum dolores ut illum quo vitae est cum, laborum esse
-                            blanditiis accusantium. Quam ipsa, minus tempore vero veniam fuga architecto dolorem
-                            perspiciatis. Dolor magnam odit facere facilis consequuntur? Minima assumenda nulla nostrum
-                            repudiandae quo.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <a href="">Ссылка 1</a>
-                    </div>
-                </div>
             </div>
 
-            <div class="section" id="pricing">
-                <div class="container box">
-                    <div class="row text-center m-5">
-                        <div class="col">
-                            <h2>Pricing</h2>
+
+
+        </section>
+
+        <section class="case" id="case_scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="cow text-center">
+                        <h2>КЕЙСЫ</h2>
+                        <img src="img/case_line.jpg" alt="">
+                        <p class="case_text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus
+                            leo nec
+                            ornare diamcoccodo nibh
+                            ante facilisis.</p>
+                        <img class="w-100" src="img/photo_case.png" alt="фото кейса">
+                    </div>
+
+                </div>
+
+
+                <!-- <img src="img/photo_case.png" alt="фото кейса"> -->
+                <!--        тут наверняка будет слайдер написанный с помощью css или js пока добавил просто картинку-->
+
+
+
+                <div class="row project">
+                    <div class=" col-12 col-md-6 col-lg-2">
+                        <h3 class="client">CLIENT:</h3>
+                        <p class="company">Какая-то компания</p>
+                        <h3 class="website">WEBSITE:</h3>
+                        <p>http://www.somedomain.com</p>
+                        <button type="button" class="case_btn btn btn-primary">Перейти на сайт</button>
+                    </div>
+                    <div class="col-12 col-lg-9 offset-lg-1">
+                        <h3>Название проекта</h3>
+                        <p class="font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod
+                            tempor incididunt ut labore
+                            et
+                            dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea
+                            commodo
+                            consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="calculation_price" id="calculate">
+                    <div class="row ">
+                        <div class="col-12 d-flex justify-content-center">
+                            <h2>Расчет стоимости</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quod unde minus quo error
-                                vitae. Dicta explicabo placeat quas voluptatum nobis aliquid! Voluptatum voluptate sint
-                                ullam ducimus provident magnam incidunt nobis sit. Sit, rem voluptas adipisci qui
-                                reiciendis facilis earum eius obcaecati voluptatibus sint ipsum at dolorum odio corrupti
-                                unde.</p>
+                        <div class="h-100 col-12 col-lg-11 offset-lg-1 d-flex justify-content-center flex-column">
+                            <h3>ТИП САЙТА</h3>
+
+                            <select name="list1" id="list">
+                                <option value="option1" selected disabled>Выберите пункт...</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <p>Ducimus similique, ullam quaerat consequuntur vitae non praesentium dolore velit
-                                exercitationem commodi vero ipsum deleniti, nam minus qui, quas nulla. Laboriosam,
-                                libero nostrum repellat beatae magnam maiores quibusdam doloremque eligendi,
-                                voluptatibus ab ex, architecto repellendus dolorum consequatur praesentium officiis quo
-                                alias voluptatum error dignissimos. Similique aliquam modi ipsam illo minus?</p>
+                        <div class="h-100 col-12 col-lg-11 offset-lg-1 d-flex justify-content-center flex-column">
+                            <h3>ДИЗАЙН</h3>
+                            <select name="list2" id="list2">
+                                <option value="option1" selected disabled>Выберите пункт...</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <p>Quibusdam enim iste totam, nulla similique natus pariatur libero in hic corrupti
-                                blanditiis, voluptas consequatur veniam quaerat et dolorum officiis? Minus dolorum
-                                officia dolore itaque voluptates eligendi blanditiis? Perspiciatis officia enim quo
-                                expedita autem, atque optio fugiat quod provident unde asperiores quis consectetur
-                                suscipit, itaque fugit dolore facere? Quisquam, deleniti.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Odit necessitatibus, tenetur earum ducimus id est hic, alias sunt corrupti magnam quod
-                                quidem numquam incidunt quis! Quae ut veritatis quis quo ratione. Labore ex eveniet
-                                saepe repellat. Ipsum eaque inventore iusto eius quae facilis, nihil mollitia voluptas
-                                tempore obcaecati nostrum quibusdam adipisci architecto, aspernatur sed. Natus eveniet
-                                corporis molestiae.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Eaque autem illo non at officia aspernatur eligendi quod quibusdam dignissimos
-                                blanditiis, quam corporis. Voluptatem magnam harum dolores ut illum quo vitae est cum,
-                                laborum esse blanditiis accusantium. Quam ipsa, minus tempore vero veniam fuga
-                                architecto dolorem perspiciatis. Dolor magnam odit facere facilis consequuntur? Minima
-                                assumenda nulla nostrum repudiandae quo.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Minima tenetur exercitationem esse ducimus explicabo, quisquam corrupti voluptatem quia!
-                                Ducimus, sit ullam. Incidunt officiis velit necessitatibus a odio iusto sequi quo, optio
-                                nesciunt! Asperiores, molestiae deserunt. Accusamus vero nobis minima iusto, quam
-                                debitis id. Voluptate dolorem cum doloribus sit? Recusandae exercitationem reiciendis
-                                accusamus animi impedit hic delectus ab odit?</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Obcaecati cupiditate quae a nulla perferendis! Corporis consequatur ratione earum
-                                dolores, dolore sit, velit similique facilis commodi praesentium eligendi itaque modi
-                                quod fugit reiciendis ex fuga! Quod unde, dolor excepturi numquam ex tenetur blanditiis
-                                totam cupiditate sunt laudantium corrupti nobis itaque vel quidem nemo culpa corporis
-                                dolorem autem? Voluptatem, delectus?</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Laudantium eligendi enim quia labore, magnam aliquid obcaecati veritatis placeat numquam
-                                repudiandae laboriosam voluptatem. Architecto ea molestiae sunt nisi. Voluptates, est,
-                                officia quam nobis libero adipisci velit iure, assumenda dicta fugiat hic? Ducimus, iure
-                                iste magni, odio eos aliquam ipsa sint repellendus ipsum sit culpa repudiandae ipsam.
-                                Alias, et error.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Hic, iste. Cumque animi quae aperiam velit dolorum repellendus facere, quam obcaecati a
-                                neque blanditiis non aliquid aut. Nihil, expedita nemo aliquid et, ipsum itaque
-                                exercitationem quibusdam architecto nobis iusto fugit libero aspernatur recusandae
-                                omnis, ad voluptatem reiciendis! Quia unde quidem modi at provident porro cum accusamus
-                                quae asperiores dignissimos!</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Atque amet dolorum optio quod perferendis consequatur alias, commodi molestias, expedita
-                                ad esse itaque placeat necessitatibus labore sed eius, unde eveniet! Veniam perspiciatis
-                                architecto adipisci suscipit quas cumque aperiam vitae et officia impedit modi deleniti
-                                velit unde minus mollitia magni, non iure iusto est eum! Rem facilis odit ex sunt.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Illo nihil facere perspiciatis provident adipisci, perferendis dignissimos pariatur rerum
-                                veniam cumque accusamus iusto illum praesentium iure culpa voluptatum dolore. Nostrum
-                                sunt tempora, porro fugit necessitatibus fugiat, optio dolore corporis enim aut ipsa
-                                reprehenderit dolor error praesentium harum qui facilis doloribus. Praesentium vel est
-                                ipsam, quam corrupti nemo voluptatibus alias?</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Hic earum, sunt suscipit sint porro quidem labore libero, quam inventore neque optio
-                                officiis quibusdam! Distinctio, ad quos cumque, aperiam praesentium placeat ullam
-                                nesciunt in ab rem et voluptatem iure earum culpa impedit aliquid quae voluptate
-                                consectetur, nam dolorum quo quam? Pariatur dolor magni praesentium sint similique
-                                eligendi ut omnis.</p>
+                        <div class="h-100 col-12 col-lg-11 offset-lg-1 d-flex justify-content-center flex-column">
+                            <h3>АДАПТИВНОСТЬ</h3>
+                            <select name="list3" id="list3">
+                                <option value="option1" selected disabled>Выберите пункт...</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option3</option>
+                            </select>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quod unde minus quo error
-                                vitae. Dicta explicabo placeat quas voluptatum nobis aliquid! Voluptatum voluptate sint
-                                ullam ducimus provident magnam incidunt nobis sit. Sit, rem voluptas adipisci qui
-                                reiciendis facilis earum eius obcaecati voluptatibus sint ipsum at dolorum odio corrupti
-                                unde.</p>
-                        </div>
+
+                    <div class=" row d-flex term_сost block1">
+                        <div class="col-1 offset-0 col-lg-1 offset-lg-1">Сроки</div>
+                        <div class="col-1 offset-10 col-lg-1 offset-lg-9 text-end">0</div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Ducimus similique, ullam quaerat consequuntur vitae non praesentium dolore velit
-                                exercitationem commodi vero ipsum deleniti, nam minus qui, quas nulla. Laboriosam,
-                                libero nostrum repellat beatae magnam maiores quibusdam doloremque eligendi,
-                                voluptatibus ab ex, architecto repellendus dolorum consequatur praesentium officiis quo
-                                alias voluptatum error dignissimos. Similique aliquam modi ipsam illo minus?</p>
-                        </div>
+
+                    <div class="row d-flex term_сost block2">
+                        <div class="col-1 offset-0 col-lg-1 offset-lg-1">Стоимость</div>
+                        <div class="col-1 offset-10 col-lg-1 offset-lg-9 text-end">0</div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Quibusdam enim iste totam, nulla similique natus pariatur libero in hic corrupti
-                                blanditiis, voluptas consequatur veniam quaerat et dolorum officiis? Minus dolorum
-                                officia dolore itaque voluptates eligendi blanditiis? Perspiciatis officia enim quo
-                                expedita autem, atque optio fugiat quod provident unde asperiores quis consectetur
-                                suscipit, itaque fugit dolore facere? Quisquam, deleniti.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Odit necessitatibus, tenetur earum ducimus id est hic, alias sunt corrupti magnam quod
-                                quidem numquam incidunt quis! Quae ut veritatis quis quo ratione. Labore ex eveniet
-                                saepe repellat. Ipsum eaque inventore iusto eius quae facilis, nihil mollitia voluptas
-                                tempore obcaecati nostrum quibusdam adipisci architecto, aspernatur sed. Natus eveniet
-                                corporis molestiae.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Eaque autem illo non at officia aspernatur eligendi quod quibusdam dignissimos
-                                blanditiis, quam corporis. Voluptatem magnam harum dolores ut illum quo vitae est cum,
-                                laborum esse blanditiis accusantium. Quam ipsa, minus tempore vero veniam fuga
-                                architecto dolorem perspiciatis. Dolor magnam odit facere facilis consequuntur? Minima
-                                assumenda nulla nostrum repudiandae quo.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <a href="">Ссылка 1</a>
-                        </div>
+
+                    <div class="row mb-5">
+                        <div class="col mt-5 mb-5 text-center"><button type="button"
+                                class="case_btn btn btn-primary">Оставить заявку</button></div>
                     </div>
 
                 </div>
+            </div>
 
 
-                <section>
-                    <div class="container mt-5 mb-5">
-                        <div class="row">
-                            <div class="col">
-                                <div class="text">
-                                    <p class="element-animation">Lorem ipsum dolor sit amet consectetur adipisicing
-                                        elit. Eveniet eos nemo officia, nam ab repellendus molestias provident fuga
-                                        fugit voluptatum dolore, rerum possimus velit consequatur neque. Sunt, eius
-                                        alias ea dolorem quae, laborum dicta cumque similique placeat non pariatur
-                                        aspernatur quas mollitia nulla nobis explicabo quos est quam consequatur qui!
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eligendi, ducimus
-                                        facere quod facilis cumque illo itaque odit corrupti non tempore ea earum a
-                                        assumenda officiis repellendus provident deleniti distinctio et totam magni quo
-                                        eaque! Voluptatum optio, maxime voluptas aliquam tempora velit eos unde vitae,
-                                        culpa ab quidem cumque laudantium?</p>
-                                </div>
-                            </div>
+
+        </section>
+
+        <section class="statistic" id="statics">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>НЕМНОГО СТАТИСТИКИ</h2>
+                        <img class="statick_line" src="img/static_line.png" alt="">
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="col-12 col-md-6 col-lg-3 statick_block text-center">
+                        <div class="happy_clients">
+                            <img src="img/smile.png" alt="картинка смайлик">
+                            <div class="quentity_clietnts">120</div>
+                            <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
                         </div>
                     </div>
-                </section>
-                <script src="js/jquery-3.6.0.min.js"></script>
-                <script src="js/bootstrap.bundle.min.js"></script>
-                <script src="js/myscript.js"></script>
+                    <div class="col-12 col-md-6 col-lg-3 statick_block text-center">
+                        <img src="img/signStatick.png" alt="картинка знака">
+
+                        <div class="quentity_hours">4,600</div>
+                        <p>ЧАСОВ РАБОТЫ</p>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 statick_block text-center">
+                        <img src="img/checkMark.png" alt="картинка галочки">
+
+                        <div class="quentity_projects">340</div>
+                        <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 statick_block text-center">
+                        <img src="img/cup.png" alt="картинка кубка">
+                        <div class="quentity_awards">23</div>
+                        <p>НАГРАД ПОЛУЧЕНО</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="feedback" id="feedback_scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>ОТЗЫВЫ</h2>
+                        <img src="img/feedback_line.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <img class="photoComment" src="img/photoComment.jpg" alt="фото человека оставившего отзыв">
+                    </div>
+                    <div class="row">
+                        <div class="col offset-0 col-lg-8 offset-lg-2 text-center mt-5 feedback_block">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                                diam. Sed
+                                commodo nibh antefacilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare
+                                diam.</p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <p class="mt-3"><strong>Михаил</strong>, Ген. директор ПАО "Газпром".</p>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="my_contacts" id="my_contacts_scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>МОИ КОНТАКТЫ</h2>
+                        <img src="img/cherta_zagolovka_194 (1).png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col
+                    ">
+                        <p class="my_contacts_text mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis
+                            sed dapibus leo
+                            nec
+                            ornare diamcoccodo </p>
+                    </div>
+
+                </div>
+                <div class="row my_contacts_container mt-5">
+                    <div class="col-12 col-md-3 offset-md-1 offset-lg-2 col-lg-2  text-center">
+                        <img class="mt-3 mb-3" src="img/geo.png" alt="картинка знака геолокации">
+                        <p>Санкт-Петербург<br><br>Невский проспект 11</p>
+                    </div>
+                    <div class="col-12 col-md-4 offset-md-0 offset-lg-1 col-lg-2 text-center">
+                        <img class="mt-3 mb-3" src="img/convert.png" alt="картинка конверта">
+                        <p>info@companyname.com</p>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 offset-lg-1 col-lg-2 text-center">
+                        <img class="mt-3 mb-3" src="img/telephone.png" alt="картинка трубки">
+                        <p>+7 999 999-99-99</p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4 mb-4">
+                        <h3>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-4">
+                        <input class="name" required autocomplete="on" name="name" type="text" placeholder="Имя">
+                    </div>
+                    <div class="col-lg-4">
+                        <input class="email" required autocomplete="on" name="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="col-lg-8 offset-lg-2">
+                        <textarea placeholder="Сообщение" class="message" name="message" id="message" cols="40"
+                            rows="5"></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <input class="mb-5 btn btn-outline-secondary submit" type="submit" value="Отправить">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="socials col-lg-4 offset-lg-4">
+                        <a href="https://facebook.com"><img src="img/faceBook.png" alt="значёк facebook"></a>
+                        <a href="https://twitter.com"><img src="img/twitter.png" alt="значёк twitter"></a>
+                        <a href="#"><img src="img/ball.png" alt="значёк мячика"></a>
+                        <a href="https://github.com"><img src="img/kitty.png" alt="значёк github"></a>
+                        <a href="https://instagram.com"><img src="img/instagram.png" alt="значёк instagram"></a>
+                        <a href="https://linkedin.com"><img src="img/in.png" alt="значёк linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="geolacation">
+            <div class="container">
+
+            </div>
+            <!--        Геолакация могу конечно вставить картинку, но наверняка она как-то через js подключаться будет-->
+        </section>
+
+        <footer>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="copyright_text">Copyright © 2021 Андрей Браун. Design by Web</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/myScriptCalculate.js"></script>
+
+
 </body>
 
 </html>
