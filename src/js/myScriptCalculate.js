@@ -152,14 +152,16 @@ $(document).ready(function() {
         let scrollDistance = $(window).scrollTop();
 
         $('section').each((i, el) => {
-            if ($(el).offset().top - $('nav').outerHeight() - 500 <= scrollDistance) {
+            if ($(el).offset().top - $('nav').outerHeight() <= scrollDistance) {
                 $('nav a').each((i, el) => {
-                    if ($(el).hasClass('active')) {
-                        $(el).removeClass('active');
+                    if ($(el).hasClass('.active')) {
+                        $(el).removeClass('.active');
+                        $(el).css('color', 'white');
                     }
                 });
 
-                $('nav li:eq(' + i + ')').find('a').addClass('active');
+                $('nav li:eq(' + i + ')').find('a').addClass('.active');
+                $('nav li:eq(' + i + ')').find('a').css('color', '#f08d0d');
             }
         });
     });
