@@ -1,59 +1,171 @@
+// const calculationSite = {
+//     typeSite: {
+//         ['визитка']: 5000,
+//         ['лендинг']: 7000,
+//         ['магазин до 100 товаров']: 15000,
+//         ['маркетплэйс']: 100000
+//     },
+//     design: {
+//         ['figma']: 10000,
+//         ['avacode']: 15000,
+//         ['photoshop']: 30000,
+//         ['персональный дизайн']: 50000
+//     },
+//     adaptive: {
+//         ['без адаптива']: 0,
+//         ['с адаптивом']: 15000
+//     }
+// };
+// let objectArraysKeys = {
+//     arrTypeKeys: Object.keys(calculationSite.typeSite),
+//     arrDesignKeys: Object.keys(calculationSite.design),
+//     arrAdaptiveKeys: Object.keys(calculationSite.adaptive)
+// };
+
+// let price = {
+//     clientType: '',
+//     clientDesign: '',
+//     clientAdaptive: ''
+// };
+// let finalPrice = 0;
+// while (true) {
+//     calculationPrice();
+//     let questionClient = confirm(`Подтвердите ваш заказ
+//     Тип сайт ${price.clientType}
+//     Дизайн ${price.clientDesign}
+//     Адаптив ${price.clientAdaptive}
+//     Общая стоимость проекта ${finalPrice}`);
+//     if (questionClient) {
+//         break;
+//     } else {
+//         alert('Давайте попробуем снова');
+//         continue;
+//     }
+// }
+
+// function calculationPrice() {
+//     while (true) {
+//         type = prompt(
+//             `Какой тип сайта вы желаете?
+//             1. ${objectArraysKeys.arrTypeKeys[0]}
+//             2. ${objectArraysKeys.arrTypeKeys[1]}
+//             3. ${objectArraysKeys.arrTypeKeys[2]}
+//             4. ${objectArraysKeys.arrTypeKeys[3]}
+//                                             Введит название или номер`,
+//             'Визитка'
+//         );
+//         if (type <= objectArraysKeys.arrTypeKeys.length && type >= 1 && type.Object != String) {
+//             finalPrice += Number(calculationSite.typeSite[objectArraysKeys.arrTypeKeys[type - 1]]);
+//             price.clientType = objectArraysKeys.arrTypeKeys[type];
+//             alert(`Вы выбрали тип ${objectArraysKeys.arrTypeKeys[type]}
+//                     Стоимость данной услуги составляет: ${calculationSite.typeSite[
+//                         objectArraysKeys.arrTypeKeys[type - 1]
+//                     ]}
+//                     Перейдём к выбору дизайна`);
+//             alert(calculationSite.typeSite[objectArraysKeys.arrTypeKeys[type - 1]]);
+//         } else if (type.toLowerCase() in calculationSite.typeSite) {
+//             finalPrice += calculationSite.typeSite[type.toLowerCase()];
+//             price.clientType = type.toLowerCase();
+//             alert(`Вы выбрали тип ${type.toLowerCase()}
+//                     Стоимость данной услуги составляет: ${calculationSite.typeSite[type.toLowerCase()]}
+//                     Перейдём к выбору дизайна`);
+//         } else {
+//             alert('Попробуйте ввести порядковый номер или значение из списка');
+//             continue;
+//         }
+//         break;
+//     }
+
+//     while (true) {
+//         design = prompt(
+//             `Какой дизайн сайта вы желаете?
+//                 1. ${objectArraysKeys.arrDesignKeys[0]}
+//                 2. ${objectArraysKeys.arrDesignKeys[1]}
+//                 3. ${objectArraysKeys.arrDesignKeys[2]}
+//                 4. ${objectArraysKeys.arrDesignKeys[3]}
+//                                                 Введит название или номер`,
+//             'figma'
+//         );
+//         if (design <= objectArraysKeys.arrDesignKeys.length && design >= 1 && design.Object != String) {
+//             finalPrice += Number(calculationSite.design[objectArraysKeys.arrDesignKeys[design - 1]]);
+//             price.clientDesign = objectArraysKeys.arrDesignKeys[design];
+//             alert(`Вы выбрали дизайн ${objectArraysKeys.arrDesignKeys[design]}
+//                         Стоимость данной услуги составляет: ${calculationSite.design[
+//                             objectArraysKeys.arrDesignKeys[design - 1]
+//                         ]}
+//                         На данный момент общая сумма проекта: ${finalPrice}
+//                         П1ерейдём к выбору адаптива`);
+//             console.log(typeof calculationSite.design[objectArraysKeys.arrDesignKeys[design - 1]]);
+//         } else if (design.toLowerCase() in calculationSite.design) {
+//             1;
+//             finalPrice += calculationSite.design[design.toLowerCase()];
+//             price.clientDesign = design.toLowerCase();
+//             alert(`Вы выбрали дизайн ${design.toLowerCase()}
+//                         Стоимость данной услуги составляет: ${calculationSite.design[design.toLowerCase()]}
+//                         На данный момент общая сумма проекта: ${finalPrice}
+//                         Перейдём к выбору адаптива`);
+//         } else {
+//             alert('Попробуйте ввести порядковый номер или значение из списка');
+//             continue;
+//         }
+
+//         break;
+//     }
+
+//     while (true) {
+//         adaptive = prompt(
+//             `Какой адаптив сайта вы желаете?
+//             1. ${objectArraysKeys.arrAdaptiveKeys[0]}
+//             2. ${objectArraysKeys.arrAdaptiveKeys[1]}
+//             3. ${objectArraysKeys.arrAdaptiveKeys[2]}
+//             4. ${objectArraysKeys.arrAdaptiveKeys[3]}
+//                                             Введит название или номер`,
+//             'с адаптивом'
+//         );
+//         if (adaptive <= objectArraysKeys.arrAdaptiveKeys.length && adaptive >= 1 && adaptive.Object != String) {
+//             finalPrice += calculationSite.adaptive[objectArraysKeys.arrAdaptiveKeys[adaptive - 1]];
+//             price.clientAdaptive = objectArraysKeys.arrAdaptiveKeys[adaptive];
+//             alert(`Вы выбрали адаптив ${objectArraysKeys.arrAdaptiveKeys[adaptive]}
+//                     Стоимость данной услуги составляет: ${calculationSite.adaptive[
+//                         objectArraysKeys.arrAdaptiveKeys[adaptive - 1]
+//                     ]}
+//                     На данный момент общая сумма проекта: ${finalPrice}
+//                     Перейдём к итогам`);
+//         } else if (adaptive.toLowerCase() in calculationSite.adaptive) {
+//             finalPrice += calculationSite.adaptive[adaptive.toLowerCase()];
+//             price.clientAdaptive = adaptive.toLowerCase();
+//             alert(`Вы выбрали адаптива ${adaptive.toLowerCase()}
+//                     Стоимость данной услуги составляет: ${calculationSite.adaptive[adaptive.toLowerCase()]}
+//                     Общая сумма проекта: ${finalPrice}
+//                     Перейдём к итогам`);
+//         } else {
+//             alert('Попробуйте ввести порядковый номер или значение из списка');
+//             continue;
+//         }
+
+//         break;
+//     }
+// }
+
 $(document).ready(function () {
-    
-    $(window).scroll(() => {
-        let scrollDistance = $(window).scrollTop();
-
-        $('.section').each((i, el) => {
-            if ($(el).offset().top - $("nav").outerHeight() <= scrollDistance) {
-                $('nav a').each((e, el) => {
-                    if ($(el).hasClass('active')) {
-                        $(el).removeClass('active');
-                    }
-                });
-
-                $('nav li:eq('+ i +')').find('a').addClass('active');
-            }
-        });
-
-            // у меня сейчас мозг взорвётся надо пересматривать в общем тут пиздец это ужас
-    // мы создаем событие на скрол в котором через переменную берем значение скрола и записываем ее
-    // потом мы each это что-то типо цикла идём по секциям и когда наш размер секции становиться меньше scrollDistance или равно то мы снова включаем цикл по навигации и если элемент какой-то имеет класс активности
-    // мы его удаляем и потом вообще ужасная штука мы ищем элемент а текущий и добавляем ему класс active 
-
-    // как вообще нормальный человек может это понять я не знаю
-
-        let options = { transhold: [0.5] };
-        // записываем что при сработке до середины элемента начнёт срабатывать анимация
-
-        let observer = new IntersectionObserver(onEntry, options);
-        let elements = $('.element-animation');
-        elements.each((i, el) => {
-            observer.observe(el);
-        });
-    
-    });
-
-    function onEntry(entry) {
-        entry.forEach(change => {
-            if (change.isIntersecting) {
-                change.target.classList.add('show-animation');
-            }
-            
-        });
-    }
-
-    // 24 минута мозг взорван... в общем задержка анимации способ мы создаем переменную в нее заносим transhold это половина элемента тоесть когда дойдёт до половины элемента включится хуйня
-    // потом создаём новый объект в которым будет помещена функция ее отработка и та самая опция потом
-    // затем создаём поиск элемента с циклом и ищем данны элемент тоесть он должен найти момент как бы вхождения когда постоянно используя цикл пока мы скролим страницу и когда дойдёт до нужного элемента скрол включит функцию onEntry которую мы создали в эту функцию мы врубаем цикл который по сути проходиться по всем возможным таким элементам и если сработал isIntersecting что хуй его вообще знает что такое добавляем кляя show-animation к данной штуке и таким образом начинаем отработку функции. Охуеть просто 
-
-    // 26 минута рассказывает как делать домашку с картинкой это важно
-    
-});
-
-$('a[href^="#"]').click(function () {
-    let valHref = $(this).attr('href');
-    $('html, body').animate({ scrollTop: $(valHref).offset().top - 20 + 'px' });
-    // добавляем анимацию скролла и замедление и как бы по клику будет происходить скрол до нужного места и до   // верха и также добавляем этому месту чтобы он чуть выше был и загораживал контент
-
+// build scenes
+new ScrollMagic.Scene({triggerElement: "#about"})
+                .setClassToggle("#menu-about", "active") // add class toggle
+                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#about').height() } }));
+new ScrollMagic.Scene({triggerElement: "#iCanDo-Scroll"})
+                .setClassToggle("#menu-iCanDo-Scroll", "active") // add class toggle
+                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#iCanDo-Scroll').height() } }));
+new ScrollMagic.Scene({triggerElement: "#case_scroll"})
+                .setClassToggle("#menu-case_scroll", "active") // add class toggle
+                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#case_scroll').height() / 2  } }));
+new ScrollMagic.Scene({triggerElement: "#calculate"})
+                .setClassToggle("#menu-calculate", "active") // add class toggle
+                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#calculate').height()  } }));
+new ScrollMagic.Scene({triggerElement: "#feedback_scroll"})
+                .setClassToggle("#menu-feedback_scroll", "active") // add class toggle
+                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#feedback_scroll').height()  } }));
+new ScrollMagic.Scene({triggerElement: "#my_contacts_scroll"})
+                .setClassToggle("#menu-my_contacts_scroll", "active") // add class toggle
+                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#my_contacts_scroll').height()  } }));
 });
 

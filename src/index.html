@@ -39,12 +39,12 @@
                             d-none d-lg-block - при достяжении размера md убери отображение данной штуки  -->
                         <div class="menu ">
                             <ul class="p-0 m-0">
-                                <li><a href="#about">ОБО МНЕ</a></li>
-                                <li><a href="#iCanDo-Scroll">УСЛУГИ</a></li>
-                                <li><a href="#case_scroll">КЕЙСЫ</a></li>
-                                <li><a href="#calculate">ПРАЙС</a></li>
-                                <li><a href="#feedback_scroll">ОТЗЫВЫ</a></li>
-                                <li><a href="#my_contacts_scroll">КОНТАКТЫ</a></li>
+                                <li><a id="menu-about" href="#about">ОБО МНЕ</a></li>
+                                <li><a id="menu-iCanDo-Scroll" href="#iCanDo-Scroll">УСЛУГИ</a></li>
+                                <li><a id="menu-case_scroll" href="#case_scroll">КЕЙСЫ</a></li>
+                                <li><a id="menu-calculate" href="#calculate">ПРАЙС</a></li>
+                                <li><a id="menu-feedback_scroll" href="#feedback_scroll">ОТЗЫВЫ</a></li>
+                                <li><a id="menu-my_contacts_scroll" href="#my_contacts_scroll">КОНТАКТЫ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -66,12 +66,12 @@
                             </a>
 
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">ОБО МНЕ</a></li>
-                                <li><a class="dropdown-item" href="#">УСЛУГИ</a></li>
-                                <li><a class="dropdown-item" href="#">КЕЙСЫ</a></li>
-                                <li><a class="dropdown-item" href="#">ПРАЙС</a></li>
-                                <li><a class="dropdown-item" href="#">ОТЗЫВЫ</a></li>
-                                <li><a class="dropdown-item" href="#">КОНТАКТЫ</a></li>
+                                <li><a class="dropdown-item" href="#about">ОБО МНЕ</a></li>
+                                <li><a class="dropdown-item" href="#iCanDo-Scroll">УСЛУГИ</a></li>
+                                <li><a class="dropdown-item" href="#case_scroll">КЕЙСЫ</a></li>
+                                <li><a class="dropdown-item" href="#calculate">ПРАЙС</a></li>
+                                <li><a class="dropdown-item" href="#feedback_scroll">ОТЗЫВЫ</a></li>
+                                <li><a class="dropdown-item" href="#my_contacts_scroll">КОНТАКТЫ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -468,7 +468,10 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/myScriptCalculate.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script> -->
+    <script src="js/myscript.js"></script>
+    
 
 
 </body>

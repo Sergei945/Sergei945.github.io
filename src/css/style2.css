@@ -44,11 +44,15 @@ nav .menu a {
   font-size: 13px;
   color: white;
 }
+
+.menu li a:visited{
+  color: white;
+}
 nav .menu .active {
   color: #f08d0d;
 }
-.menu li a:visited{
-  color: white;
+nav .menu .active:visited {
+  color: #f08d0d;
 }
 .menu li a:hover {
   color: #f08d0d;
