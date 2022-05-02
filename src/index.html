@@ -11,13 +11,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Андрей Браун - Веб разработчик</title>
 
-    <link rel="stylesheet" href="css/animate.min.css">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style2.css">
 </head>
 
 <body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="container">
@@ -26,7 +51,7 @@
                             col-xl-3
                             col-lg-3
                             col-7">
-                        <div class="logo">Андрей Браун</div>
+                        <div class="logo animate__bounceIn">Андрей Браун</div>
                     </div>
                     <div class="offset-xxl-4 col-xxl-6   
                             offset-xl-2 col-xl-7
@@ -87,9 +112,9 @@
                 <div class="row align-items-center h-100">
                     <!-- Если текст идёт по бараде и не выравнивается надо задать 100 процентов высоты контейнеру и строке -->
                     <div class="col-lg-6 mt-5 pt-5">
-                        <div class="title_container mt-5">
-                            <h1>Привет <br> Я Андрей Браун</h1>
-                            <h4>Фулл стек веб-разработчик</h4>
+                        <div class="animate__backInDown title_container mt-5">
+                            <h1 class="animate__backInDown">Привет <br> Я Андрей Браун</h1>
+                            <h4 class="animate__fadeIn">Фулл стек веб-разработчик</h4>
                             <input type="submit" value="Обо мне">
                             <input type="submit" value="Мои работы">
                         </div>
@@ -107,7 +132,8 @@
                         text_center flex-column align-items-center">
                         <h2 class="">ОБО МНЕ</h2>
                         <img src="img/cherta_zagolovka_194 (1).png" alt="">
-                        <img class="photo_about_me" src="img/photo_about_me.png" alt="фото обо мне">
+                        <img class="photo_about_me" src="img/bad-img/photo_about_me-min.png"
+                            data-src="img/photo_about_me.png" alt="фото обо мне">
                         <p class="one_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus
                             leo
                             nec
@@ -122,8 +148,8 @@
                             commodo
                             nibh ante <br>
                             facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-                        <a class="btn_download" href="#" download><img src="img/icon_about_me.png"
-                                alt="иконка скачивания">Скачать
+                        <a class="btn_download" href="#" download><img src="img/bad-img/icon_about_me-min.png"
+                                data-src="img/icon_about_me.png" alt="иконка скачивания">Скачать
                             резюме</a>
                     </div>
                 </div>
@@ -145,7 +171,7 @@
                     col-sm-6 
                     col-md-3
                     px-0 panel">
-                        <img src="img/laptop.png" alt="Картинка ноутбука">
+                        <img src="img/bad-img/laptop-min.png" data-src="img/laptop.png" alt="Картинка ноутбука">
                         <h3>Веб-дизайн</h3>
                         <p>Lorem ipsum dolor sit amet placerat
                             facilisis felis mi in tempus eleifend
@@ -157,7 +183,7 @@
                     col-sm-6 
                     col-md-3
                     px-0 panel">
-                        <img src="img/sign.png" alt="Картинка знака">
+                        <img src="img/bad-img/sign-min.png" data-src="img/sign.png" alt="Картинка знака">
                         <h3>Разработка</h3>
                         <p class="">Lorem ipsum dolor sit amet placerat
                             facilisis mi in tempus eleifend
@@ -168,7 +194,7 @@
                     col-sm-6 
                     col-md-3
                     px-0 panel">
-                        <img src="img/rocket.png" alt="Картинка ракеты">
+                        <img src="img/bad-img/rocket-min.png" data-src="img/rocket.png" alt="Картинка ракеты">
                         <h3>СЕО-Оптимизация</h3>
                         <p>Lorem ipsum dolor sit amet placerat
                             facilisis felis mi in tempus eleifend
@@ -179,7 +205,8 @@
                     col-sm-6 
                     col-md-3
                     px-0 panel">
-                        <img src="img/gramophone.png" alt="Картинка грамофона">
+                        <img src="img/bad-img/gramophone-min.png" data-src="img/gramophone.png"
+                            alt="Картинка грамофона">
                         <h3>Маркетинг</h3>
                         <p>Lorem ipsum dolor sit amet placerat
                             facilisis felis mi in tempus eleifend
@@ -200,11 +227,42 @@
                     <div class="cow text-center">
                         <h2>КЕЙСЫ</h2>
                         <img src="img/case_line.jpg" alt="">
-                        <p class="case_text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus
+                        <p class="case_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Duis sed Dapibus
                             leo nec
                             ornare diamcoccodo nibh
                             ante facilisis.</p>
-                        <img class="w-100" src="img/photo_case.png" alt="фото кейса">
+                    </div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/photo_case.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/photo_case.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/photo_case.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Предыдущий</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Следующий</span>
+                        </button>
                     </div>
 
                 </div>
@@ -313,27 +371,27 @@
                 <div class="row d-flex">
                     <div class="col-12 col-md-6 col-lg-3 statick_block text-center">
                         <div class="happy_clients">
-                            <img src="img/smile.png" alt="картинка смайлик">
+                            <img src="img/bad-img/smile-min.png" data-set="img/smile.png" alt="картинка смайлик">
                             <div class="quentity_clietnts">120</div>
                             <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 statick_block text-center">
-                        <img src="img/signStatick.png" alt="картинка знака">
+                        <img src="img/bad-img/signStatick-min.png" data-src="img/signStatick.png" alt="картинка знака">
 
-                        <div class="quentity_hours">4,600</div>
+                        <div class="quentity_hours">1600</div>
                         <p>ЧАСОВ РАБОТЫ</p>
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-3 statick_block text-center">
-                        <img src="img/checkMark.png" alt="картинка галочки">
+                        <img src="img/bad-img/checkMark-min.png" data-src="img/checkMark.png" alt="картинка галочки">
 
                         <div class="quentity_projects">340</div>
                         <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-3 statick_block text-center">
-                        <img src="img/cup.png" alt="картинка кубка">
+                        <img src="img/bad-img/cup-min.png" data-src="img/cup.png" alt="картинка кубка">
                         <div class="quentity_awards">23</div>
                         <p>НАГРАД ПОЛУЧЕНО</p>
                     </div>
@@ -353,7 +411,8 @@
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <img class="photoComment" src="img/photoComment.jpg" alt="фото человека оставившего отзыв">
+                        <img class="photoComment" src="img/bad-img/photoComment-min.jpg" data-src="img/photoComment.jpg"
+                            alt="фото человека оставившего отзыв">
                     </div>
                     <div class="row">
                         <div class="col offset-0 col-lg-8 offset-lg-2 text-center mt-5 feedback_block">
@@ -400,15 +459,18 @@
                 </div>
                 <div class="row my_contacts_container mt-5">
                     <div class="col-12 col-md-3 offset-md-1 offset-lg-2 col-lg-2  text-center">
-                        <img class="mt-3 mb-3" src="img/geo.png" alt="картинка знака геолокации">
+                        <img class="mt-3 mb-3" src="img/bad-img/geo-min.png" data-src="img/geo.png"
+                            alt="картинка знака геолокации">
                         <p>Санкт-Петербург<br><br>Невский проспект 11</p>
                     </div>
                     <div class="col-12 col-md-4 offset-md-0 offset-lg-1 col-lg-2 text-center">
-                        <img class="mt-3 mb-3" src="img/convert.png" alt="картинка конверта">
+                        <img class="mt-3 mb-3" src="img/bad-img/convert-min.png" data-src="img/convert.png"
+                            alt="картинка конверта">
                         <p>info@companyname.com</p>
                     </div>
                     <div class="col-12 col-md-3 offset-md-1 offset-lg-1 col-lg-2 text-center">
-                        <img class="mt-3 mb-3" src="img/telephone.png" alt="картинка трубки">
+                        <img class="mt-3 mb-3" src="img/bad-img/telephone-min.png" data-src="img/telephone.png"
+                            alt="картинка трубки">
                         <p>+7 999 999-99-99</p>
 
                     </div>
@@ -466,12 +528,16 @@
         </footer>
     </main>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/jquery.spincrement.min.js"></script>
+
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script> -->
     <script src="js/myscript.js"></script>
-    
+
 
 
 </body>

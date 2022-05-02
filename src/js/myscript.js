@@ -147,25 +147,89 @@
 //     }
 // }
 
-$(document).ready(function () {
-// build scenes
-new ScrollMagic.Scene({triggerElement: "#about"})
-                .setClassToggle("#menu-about", "active") // add class toggle
-                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#about').height() } }));
-new ScrollMagic.Scene({triggerElement: "#iCanDo-Scroll"})
-                .setClassToggle("#menu-iCanDo-Scroll", "active") // add class toggle
-                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#iCanDo-Scroll').height() } }));
-new ScrollMagic.Scene({triggerElement: "#case_scroll"})
-                .setClassToggle("#menu-case_scroll", "active") // add class toggle
-                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#case_scroll').height() / 2  } }));
-new ScrollMagic.Scene({triggerElement: "#calculate"})
-                .setClassToggle("#menu-calculate", "active") // add class toggle
-                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#calculate').height()  } }));
-new ScrollMagic.Scene({triggerElement: "#feedback_scroll"})
-                .setClassToggle("#menu-feedback_scroll", "active") // add class toggle
-                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#feedback_scroll').height()  } }));
-new ScrollMagic.Scene({triggerElement: "#my_contacts_scroll"})
-                .setClassToggle("#menu-my_contacts_scroll", "active") // add class toggle
-                .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#my_contacts_scroll').height()  } }));
+$(document).ready(function() {
+    new WOW().init();
+    // build scenes
+    new ScrollMagic.Scene({ triggerElement: '#about' })
+        .setClassToggle('#menu-about', 'active') // add class toggle
+        .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#about').height() } }));
+    new ScrollMagic.Scene({ triggerElement: '#iCanDo-Scroll' })
+        .setClassToggle('#menu-iCanDo-Scroll', 'active') // add class toggle
+        .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#iCanDo-Scroll').height() } }));
+    new ScrollMagic.Scene({ triggerElement: '#case_scroll' })
+        .setClassToggle('#menu-case_scroll', 'active') // add class toggle
+        .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#case_scroll').height() / 2 } }));
+    new ScrollMagic.Scene({ triggerElement: '#calculate' })
+        .setClassToggle('#menu-calculate', 'active') // add class toggle
+        .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#calculate').height() } }));
+    new ScrollMagic.Scene({ triggerElement: '#feedback_scroll' })
+        .setClassToggle('#menu-feedback_scroll', 'active') // add class toggle
+        .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#feedback_scroll').height() } }));
+    new ScrollMagic.Scene({ triggerElement: '#my_contacts_scroll' })
+        .setClassToggle('#menu-my_contacts_scroll', 'active') // add class toggle
+        .addTo(new ScrollMagic.Controller({ globalSceneOptions: { duration: $('#my_contacts_scroll').height() } }));
+
+    let options = { threshold: [ 0.3 ] };
+    let observerImg = new IntersectionObserver(onEntryImg, options);
+    let elementsImg = $('img');
+
+    elementsImg.each((i, el) => {
+        if (el.dataset.src) {
+            observerImg.observe(el);
+        }
+    });
+
+    observerSelecor('.my_contacts', 'my_contacts_active');
+    observerSelecor('.statistic', 'statistic_active');
+    observerSelecor('.iCanDo', 'iCanDo_active');
+
+    let observer = new IntersectionObserver(function(entry) {
+        entry.forEach((change) => {
+            if (change.isIntersecting) {
+                $('.quentity_hours').spincrement({
+                    thousandSeparator: '',
+                    duration: 2500
+                });
+                $('.quentity_projects').spincrement({
+                    thousandSeparator: '',
+                    duration: 2500
+                });
+                $('.quentity_awards').spincrement({
+                    thousandSeparator: '',
+                    duration: 2500
+                });
+                $('.quentity_clietnts').spincrement({
+                    thousandSeparator: '',
+                    duration: 5000
+                });
+            }
+        });
+    }, options);
+    let element = $('.quentity_hours');
+    element.each((i, el) => {
+        observer.observe(el);
+    });
 });
 
+function onEntryImg(entry) {
+    entry.forEach((change) => {
+        if (change.isIntersecting) {
+            change.target.src = change.target.dataset.src;
+        }
+    });
+}
+
+function observerSelecor(selector, addClass) {
+    let options = { threshold: [ 0.3 ] };
+    let observer = new IntersectionObserver(function(entry) {
+        entry.forEach((change) => {
+            if (change.isIntersecting) {
+                change.target.classList.add(addClass);
+            }
+        });
+    }, options);
+    let element = $(selector);
+    element.each((i, el) => {
+        observer.observe(el);
+    });
+}

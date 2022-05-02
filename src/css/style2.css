@@ -84,6 +84,7 @@ main {
   /* animation: img 2s 5s ease forwards; */
 }
 .title_container {
+  
   width: 100%;   
   color: #3c384a;
   text-align: center;
@@ -165,8 +166,12 @@ main {
   text-align: center;
 }
 .iCanDo {
+  background: url("../img/bad-img/phoneCanIDo-min.jpg") no-repeat center/ cover;
+}
+.iCanDo_active {
   background: url("../img/phoneCanIDo.jpg") no-repeat center/ cover;
 }
+
 
 .iCanDo_panel {
  
@@ -294,10 +299,16 @@ main {
 .statistic {
   width: 100%;
   min-height: 500px;
+  background: url(../img/bad-img/phoneStatick-min.jpg) no-repeat center / cover;
+  background-attachment: fixed;
+}
+.statistic_active {
+
   background: url(../img/phoneStatick.jpg) no-repeat center / cover;
   background-attachment: fixed;
-  /*  */
 }
+
+
 .statick_line {
   margin-bottom: 90px;
 }
@@ -320,10 +331,14 @@ main {
 .my_contacts {
   width: 100%;
   min-height: 885px;
-  background: url(../img/phoneMyContacts.jpg) no-repeat center / cover;
   color: white;
   text-align: center;
+  background: url(../img/bad-img/MyContacts-min.jpg) no-repeat center / cover;
 }
+.my_contacts_active {
+  background: url(../img/phoneMyContacts.jpg) no-repeat center / cover;
+}
+
 .my_contacts h2 {
   color: white; 
   
