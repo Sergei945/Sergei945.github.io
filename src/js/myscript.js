@@ -254,10 +254,4 @@ function addAnimationStyleClass(selector, animation, duration) {
     $(selector).addClass(animation);
     $(selector).style.setProperty('--animate-duration', duration);
 }
-function addAnimationStyleClass(selector, animation, duration, delay) {
-    $(selector).addClass('animate__animated');
-    $(selector).addClass('wow');
-    $(selector).addClass(animation);
-    $(selector).style.setProperty('--animate-duration', duration);
-    $(selector).style.setProperty('--animate-delay', delay);
-}
+
