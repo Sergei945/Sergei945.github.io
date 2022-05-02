@@ -209,6 +209,10 @@ $(document).ready(function() {
     element.each((i, el) => {
         observer.observe(el);
     });
+
+    addAnimationStyleAllclass('h2', 'animate__fadeInDown', '1.5s');
+    addAnimationStyleAllclass('.panel', 'animate__flipInY', '1.5s');
+    addAnimationStyleClass('.my_contacts_container', 'animate__heartBeat', '2.5s');
 });
 
 function onEntryImg(entry) {
@@ -232,4 +236,28 @@ function observerSelecor(selector, addClass) {
     element.each((i, el) => {
         observer.observe(el);
     });
+}
+
+function addAnimationStyleAllclass(selector, animation, duration) {
+    let headerTwo = $(selector);
+    headerTwo.each((i, el) => {
+        el.classList.add('animate__animated');
+        el.classList.add('wow');
+        el.classList.add(animation);
+        el.style.setProperty('--animate-duration', duration);
+    });
+}
+
+function addAnimationStyleClass(selector, animation, duration) {
+    $(selector).addClass('animate__animated');
+    $(selector).addClass('wow');
+    $(selector).addClass(animation);
+    $(selector).style.setProperty('--animate-duration', duration);
+}
+function addAnimationStyleClass(selector, animation, duration, delay) {
+    $(selector).addClass('animate__animated');
+    $(selector).addClass('wow');
+    $(selector).addClass(animation);
+    $(selector).style.setProperty('--animate-duration', duration);
+    $(selector).style.setProperty('--animate-delay', delay);
 }
