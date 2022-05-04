@@ -1,21 +1,3 @@
-// const calculationSite = {
-//     typeSite: {
-//         ['визитка']: 5000,
-//         ['лендинг']: 7000,
-//         ['магазин до 100 товаров']: 15000,
-//         ['маркетплэйс']: 100000
-//     },
-//     design: {
-//         ['figma']: 10000,
-//         ['avacode']: 15000,
-//         ['photoshop']: 30000,
-//         ['персональный дизайн']: 50000
-//     },
-//     adaptive: {
-//         ['без адаптива']: 0,
-//         ['с адаптивом']: 15000
-//     }
-// };
 // let objectArraysKeys = {
 //     arrTypeKeys: Object.keys(calculationSite.typeSite),
 //     arrDesignKeys: Object.keys(calculationSite.design),
@@ -212,9 +194,53 @@ $(document).ready(function() {
 
     addAnimationStyleAllclass('h2', 'animate__fadeInDown', '1.5s');
     addAnimationStyleAllclass('.panel', 'animate__flipInY', '1.5s');
-    addAnimationStyleClass('.my_contacts_container', 'animate__heartBeat', '2.5s');
+    // addAnimationStyleClass('.my_contacts_container', 'animate__heartBeat', '2.5s');
+
+    let objactType = {
+        card: 5000,
+        lending: 7000,
+        shop: 15000,
+        supermarket: 100000
+    };
+    let design = {
+        figma: 10000,
+        avacode: 15000,
+        photoshop: 30000,
+        personal: 50000
+    };
+    let adaptive = {
+        notAdaptive: 0,
+        withAdaptive: 15000
+    };
+
+    let price = {
+        clientType: 0,
+        clientDesign: 0,
+        clientAdaptive: 0
+    };
+    let finalPrice;
+    $('#list').on('change', function() {
+        finalPrice = 0;
+        price.clientType = objactType[$(this).val()];
+        finalPrice += price.clientType;
+        $('.end-price').text(finalPrice);
+    });
+
+    $('#list2').on('change', function() {
+        finalPrice = price.clientType;
+        price.clientDesign = design[$(this).val()];
+        finalPrice += price.clientDesign;
+        $('.end-price').text(finalPrice);
+    });
+    $('#list3').on('change', function() {
+        finalPrice = price.clientType + price.clientDesign;
+        price.clientAdaptive = adaptive[$(this).val()];
+        finalPrice += price.clientAdaptive;
+        $('.end-price').text(finalPrice);
+    });
 });
 
+// finalPrice = objactType[price.clientType] + design[price.clientDesign] + adaptive[price.clientAdaptive];
 function onEntryImg(entry) {
     entry.forEach((change) => {
         if (change.isIntersecting) {
@@ -254,4 +280,3 @@ function addAnimationStyleClass(selector, animation, duration) {
     $(selector).addClass(animation);
     $(selector).style.setProperty('--animate-duration', duration);
 }
-

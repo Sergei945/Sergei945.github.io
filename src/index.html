@@ -20,9 +20,9 @@
 
 <body>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
-    </button>
+    </button> -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -310,9 +310,13 @@
                             <h3>ТИП САЙТА</h3>
 
                             <select name="list1" id="list">
-                                <option value="option1" selected disabled>Выберите пункт...</option>
-                                <option value="option2">option2</option>
-                                <option value="option3">option3</option>
+                                <option selected disabled>Выберите пункт...</option>
+                                <option value="card">Визитка - <span>5000</span> руб.</option>
+                                <option value="lending">Лендинг - <span>7000</span> руб.</option>
+                                <option value="shop">Маказин до 100 товаров - <span>15000</span> руб.
+                                </option>
+                                <option value="supermarket">Маркетплэйс <span>100000</span> руб.
+                                </option>
                             </select>
                         </div>
                     </div>
@@ -320,9 +324,11 @@
                         <div class="h-100 col-12 col-lg-11 offset-lg-1 d-flex justify-content-center flex-column">
                             <h3>ДИЗАЙН</h3>
                             <select name="list2" id="list2">
-                                <option value="option1" selected disabled>Выберите пункт...</option>
-                                <option value="option2">option2</option>
-                                <option value="option3">option3</option>
+                                <option selected disabled>Выберите пункт...</option>
+                                <option value="figma">figma - <span>10000</span> руб.</option>
+                                <option value="avacode">avacode - <span>15000</span> руб.</option>
+                                <option value="photoshop">photoshop - <span>30000</span> руб.</option>
+                                <option value="personal">personal - <span>50000</span> руб.</option>
                             </select>
                         </div>
                     </div>
@@ -330,11 +336,12 @@
                         <div class="h-100 col-12 col-lg-11 offset-lg-1 d-flex justify-content-center flex-column">
                             <h3>АДАПТИВНОСТЬ</h3>
                             <select name="list3" id="list3">
-                                <option value="option1" selected disabled>Выберите пункт...</option>
-                                <option value="option2">option2</option>
-                                <option value="option3">option3</option>
+                                <option selected disabled>Выберите пункт...</option>
+                                <option value="notAdaptive">без адаптив - <span>0</span> руб.</option>
+                                <option value="withAdaptive">с адаптивом - <span>15000</span> руб.</option>
                             </select>
                         </div>
+                        <p id="result"></p>
                     </div>
 
 
@@ -345,7 +352,7 @@
 
                     <div class="row d-flex term_сost block2">
                         <div class="col-1 offset-0 col-lg-1 offset-lg-1">Стоимость</div>
-                        <div class="col-1 offset-10 col-lg-1 offset-lg-9 text-end">0</div>
+                        <div class="col-1 offset-10 col-lg-1 offset-lg-9 text-end end-price"></div>
                     </div>
 
                     <div class="row mb-5">
