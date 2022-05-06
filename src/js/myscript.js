@@ -64,33 +64,58 @@ $(document).ready(function() {
     addAnimationStyleAllclass('h2', 'animate__fadeInDown', '1.5s');
     addAnimationStyleAllclass('.panel', 'animate__flipInY', '1.5s');
     // addAnimationStyleClass('.my_contacts_container', 'animate__heartBeat', '2.5s');
-
-    let objactType = {
-        card: 5000,
-        lending: 7000,
-        shop: 15000,
-        supermarket: 100000
+    let objectPrices = {
+        objactType: {
+            card: 5000,
+            lending: 7000,
+            shop: 15000,
+            supermarket: 100000
+        },
+        design: {
+            figma: 10000,
+            avacode: 15000,
+            photoshop: 30000,
+            personal: 50000
+        },
+        adaptive: {
+            notAdaptive: 10000,
+            withAdaptive: 15000
+        }
     };
-    let design = {
-        figma: 10000,
-        avacode: 15000,
-        photoshop: 30000,
-        personal: 50000
+    let objectDays = {
+        objactType: {
+            card: 2,
+            lending: 3,
+            shop: 7,
+            supermarket: 14
+        },
+        design: {
+            figma: 3,
+            avacode: 4,
+            photoshop: 5,
+            personal: 10
+        },
+        adaptive: {
+            notAdaptive: 1,
+            withAdaptive: 2
+        }
     };
-    let adaptive = {
-        notAdaptive: 10000,
-        withAdaptive: 15000
-    };
-
     let price = {
         clientType: 0,
         clientDesign: 0,
         clientAdaptive: 0
     };
-    let finalPrice = 0;
-    $('#list').on('change', function() {
-        price.clientType = objactType[$(this).val()];
+    let days = {
+        typeDays: 0,
+        designDays: 0,
+        adaptiveDays: 0
+    };
 
+    let finalPrice = 0;
+    let finalDays = 0;
+    $('#list').on('change', function() {
+        price.clientType = objectPrices.objactType[$(this).val()];
+        days.typeDays = objectDays.objactType[$(this).val()];
         if (
             !price.clientDesign == 0 &&
             !price.clientAdaptive == 0 &&
@@ -98,16 +123,20 @@ $(document).ready(function() {
             !price.clientDesign == 0
         ) {
             finalPrice = price.clientDesign + price.clientAdaptive + price.clientType;
-            console.log(finalPrice);
+            finalDays = days.typeDays + days.designDays + days.adaptiveDays;
         } else {
             finalPrice = 0;
+            finalDays = 0;
             finalPrice += price.clientType;
+            finalDays += days.typeDays;
         }
         $('.end-price').text(finalPrice);
+        $('.end-time').text(finalDays);
     });
 
     $('#list2').on('change', function() {
-        price.clientDesign = design[$(this).val()];
+        price.clientDesign = objectPrices.design[$(this).val()];
+        days.designDays = objectDays.design[$(this).val()];
         if (
             !price.clientType == 0 &&
             !price.clientAdaptive == 0 &&
@@ -115,21 +144,30 @@ $(document).ready(function() {
             !price.clientType == 0
         ) {
             finalPrice = price.clientDesign + price.clientAdaptive + price.clientType;
+            finalDays = days.typeDays + days.designDays + days.adaptiveDays;
         } else {
             finalPrice = price.clientType;
             finalPrice += price.clientDesign;
+            finalDays = days.typeDays;
+            finalDays += days.designDays;
         }
         $('.end-price').text(finalPrice);
+        $('.end-time').text(finalDays);
     });
     $('#list3').on('change', function() {
-        price.clientAdaptive = adaptive[$(this).val()];
+        price.clientAdaptive = objectPrices.adaptive[$(this).val()];
+        days.adaptiveDays = objectDays.adaptive[$(this).val()];
         if (!price.clientType == 0 && !price.clientDesign == 0 && !price.clientDesign == 0 && !price.clientType == 0) {
             finalPrice = price.clientDesign + price.clientAdaptive + price.clientType;
+            finalDays = days.typeDays + days.designDays + days.adaptiveDays;
         } else {
             finalPrice = price.clientType + price.clientDesign;
             finalPrice += price.clientAdaptive;
+            finalDays = days.typeDays + days.designDays;
+            finalDays = days.adaptiveDays;
         }
         $('.end-price').text(finalPrice);
+        $('.end-time').text(finalDays);
     });
 });
 
