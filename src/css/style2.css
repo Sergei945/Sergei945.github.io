@@ -397,5 +397,10 @@ footer {
   font-size: 13.3px;  
   font-weight: 400;
 }
+.feedback {
+  min-height: 300px;
+}
+
+
 
 
