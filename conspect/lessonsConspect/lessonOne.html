@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Раздел 1. Структура сайта, работа с макетом</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/stylesheet.css=">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/styleLesson.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-2 offset-5">
+                    <a href="../index.html"><button type="button" class="btn btn-outline-secondary">Назад к
+                            разделам</button></a>
+                </div>
+                <div class="col-12">
+                    <h1>Раздел 1. Структура сайта, работа с макетом</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="one_lesson">
+        <div class="container">
+            <div class="row">
+                <h2 class="mt-4">1. Введение</h2>
+                <div class="col offset-3">
+                    <div class="introduction">
+
+                        <p class="mt-5">Нам предстоит сверстать сайт-визитку по psd макету. Мы сделаем:</p>
+                        <ol class="one_lesson_">
+                            <li>Главное окно с приветствием и навигацией</li>
+                            <li>Раздел о вас</li>
+                            <li>Раздел скиллов</li>
+                            <li>Раздел кейсов со слайдером</li>
+                            <li>Раздел расчёта стоимости посредствам калькулятора</li>
+                            <li>Красивая анимированная статистика</li>
+                            <li>Отзывы клиентов </li>
+                            <li>Раздел контактные данные</li>
+                            <li>Поучимся работать с Yandex картой и др. картами</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="mt-4">2. Виды сайтов</h2>
+                    <div class="sites">
+                        <ol class="mt-5">
+                            <li>Интернет представительство - представляют человека или продукт. (Сайт-визитка, Лендинг,
+                                Интернет магазины, Интернет витрины) <br>
+                                <ul>
+                                    <li>Сайт-визитка - деловой стиль, без особого колличества анимаций, всё по делу,
+                                        рассказывают о человеке или компании</li>
+                                    <li>Корпоративный сайт - новости компании, блоги, деловой стиль сайта, мало лишней
+                                        анимации</li>
+                                    <li>Лендинг - страница захвата посвещённые какому-то одному продукту. Цель лендинга
+                                        удержать всеми способами пользователя на сайте, а также заполучить контектные
+                                        данные клиента</li>
+                                    <li>Интернет магазин или интернет витрина - товары, категории, возможно вам
+                                        понравится и др. Что-то типо Валберис, Озон и др. интернет магазины</li>
+                                </ul>
+                            </li>
+                            <li>Информационные порталы - новостные сайты, тематические сайты например футбольные, блоги,
+                                сайты справочники</li>
+                            <li>Web-сервисы - google, youTube, соц.сети, доски объявлений и др.</li>
+                        </ol>
+                        <p>
+                            CMS - система управления контентом - программа созданная для того, чтобы заказчик мог
+                            регулировать контент на сайте не обращаясь к программисту и не залезая в код
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="mt-4">3. Кросбраузерность</h2>
+                    <p class="mt-5">
+                        Ввиду того, что на разных браузерах использовались разные стандарты, сайт может на разных
+                        устройствах и браузерах выглядить по разному поэтому нужно всегд проверять свой сайт на работе с
+                        разными популярными браузерами
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="mt-4">4. Брэкетс</h2>
+
+                    <p class="mt-5">В материалах к уроку есть все файлы.</p>
+                    <p>Сам пользуюсь VScode c плагинами: </p>
+                    <ol>
+                        <li>All Autocomplete</li>
+                        <li>Auto Close Tag</li>
+                        <li>Auto Complete Tag</li>
+                        <li>Auto Rename Tag</li>
+                        <li>Beautify</li>
+                        <li>Code Runner</li>
+                        <li>Import Cost</li>
+                        <li>JavaScript (ES6) code snippets</li>
+                        <li>jshint</li>
+                        <li>Live Server</li>
+                        <li>Multiple clipboards for VSCode</li>
+                        <li>Reactjs code snippets</li>
+                        <li>Sass</li>
+                        <li>Theme - Oceanic Next</li>
+                        <li>vscode-icons</li>
+                        <li>ESLint</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-2">
+                        Файловая структура проекта:
+                    </h3>
+                    <ol>
+                        <li>src - это папка где непосредственно мы работаем там могут быть еще не сжатые файлы, еще не
+                            сжатые картинки и это место где непосредственно работает программист</li>
+                        <li>dst - это уже конечная папка проекта где ужаты и минифицированы файлы, пробелы и комментарии
+                            все стёрты, файлы лишние удалены и др.</li>
+                    </ol>
+                    <p>Внутри данных папок может быть вот такая система как на картинке или любая другая в зависимости
+                        от проекта или от используемых технологий</p>
+                    <img src="../img/lessonOne_photo1.png" alt="Фото структуры папок">
+                </div>
+            </div>
+            <div class="row">
+                <h3 class="mb-5 mt-5">Структура html - документа</h3>
+                <div class="col">
+                    <img src="../img/lessonOne_photo2.png" alt="">
+                    <ol class="mt-5">
+                        <li>&lt;head&gt; - голова страницы хранит в себе мето теги чаще всего или информацию о страницы, ключевые слова для поисковиков, также пишется там тайтл, подключаются css стили</li>
+                        <li>&lt;body&gt; - тег тела сайта в котором пишется весь основной контент, который виден пользователю</li>
+                        <li>&lt;h1&gt; - &lt;h6&gt; - от h1 до h6 заголовок страницы. h1 - должен быть один на странице это главный заголовок всех остальных может быть сколько угодно, но желательно их использовать по нарастающей</li>
+                    </ol>
+                    <!-- &lt; и &gt; -->
+                </div>
+            </div>
+
+            <div class="row">
+                <h3 class="mb-5 mt-5">Работа с макетом в фотошопе</h3>
+                <ol>
+                    <li>jpg - если есть возможность использовать jpg используйте его можно сжать, он не сильно режет изображение, но не имеет альфа канала и лучше использовать на крупные изображения и фоны</li>
+                    <li>png - имеет альфа канал, много весит, лучше использовать на малых изображениях у которых не должно быть фона (альфа канал это фон)</li>
+                    <li>swg - это векторное изображение линии созданы программным методом их можно растягивать как угодно делать с ними всё что угодно качество картинки не изменится, имеет ограничения в цвете и 255 оттенков цвете, чаще используется для создания иконок разного рода</li>
+                    
+                </ol>
+            </div>
+        </div>
+
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Полезные ссылки к уроку</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ol>
+                        <li><a href="http://htmlbook.ru/">Справочник по html и css</a></li>
+                        <li><a target="_blank" href="https://webref.ru/">Справочник по всему что связано с разработкой
+                                сайтов</a></li>
+                        <li><a target="_blank" href="https://codeguide.maxgraph.ru/">Еще один справочник по HTML и
+                                CSS</a></li>
+                        <li><a target="_blank"
+                                href="https://habr.com/ru/company/click/blog/492258/?ysclid=l41q0dc262">OpenGraph
+                                разметка</a> </li>
+                        <li><a target="_blank" href="https://github.com/">GitHub</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
