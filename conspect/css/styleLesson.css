@@ -16,7 +16,7 @@ h1 {
 }
 
 footer {
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 h2 {
@@ -26,4 +26,21 @@ h2 {
 .introduction p {
     font-weight: 700;
     font-size: 20px;
+}
+.distr {
+    font-size: 17px;
+    font-weight: 400;
+    
+}
+.distr span {
+    font-weight: 700;
+}
+.distr li {
+   
+    margin-top: 10px;
+}
+
+.table {
+    display: flex;
+    justify-content: space-around;
 }

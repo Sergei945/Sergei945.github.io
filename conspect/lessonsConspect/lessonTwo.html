@@ -1,24 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Раздел 1. Структура сайта, работа с макетом</title>
+    <title>Раздел 2. Элементы HTML, GIT, прототипирование</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/stylesheet.css=">
+    <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/animate.min.css">
     <link rel="stylesheet" href="../css/styleLesson.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-2 offset-5">
-                    <a href="../index.html"><button type="button" class="btn btn-outline-secondary">Назад к разделам</button></a>
+                    <a href="../index.html"><button type="button" class="btn btn-outline-secondary">Назад к
+                            разделам</button></a>
+                </div>
+                <div class="col-12">
+                    <h1>Раздел 2. Элементы HTML, GIT, прототипирование</h1>
                 </div>
             </div>
         </div>
     </header>
+
+    <section class="html mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="mt-4">1. HTML </h2>
+                    <div class="distr mt-4">
+                        <ul>
+                            <li><span>HTML</span> - язык гипертекстовый разметки. Стандарты зашитые в браузер, благодаря
+                                которым он обрабатывает код и выдаёт нам страницу </li>
+                            <li><span>Теги</span> - блоки из которых состоит разметка (кирпичи сайта из которых он
+                                строится)
+                                <ol class="mt-1">
+                                    <li>Теги бывают: <br> блочные(block) - занимают всю ширину страницы <br>
+                                        строчные(inline) - не больше ширины контента</li>
+                                    <li>Всегда имеют общий вид &lt;имя_тега&gt;Содержимое тега&lt;/имя_тега&gt;</li>
+                                    <li>Внутри строчных тегов нельзя помещать блочные</li>
+                                    <li>Атрибуты - это некоторые параметры html тегов, которые позволяют сделать их
+                                        уникальными (атрибутов может быть у тего сколько угодно)</li>
+                                </ol>
+                            </li>
+
+
+                        </ul>
+                        <div class="tegs mt-5">Какие бывают теги:</div>
+                        <ol class="mt-3">
+                            <li><span>&lt;header&gt;&lt;/header&gt;</span> - шапка сайта в ней находится навигация(nav),
+                                логотип</li>
+                            <li><span>&lt;nav&gt;&lt;/nav&gt;</span> - навигация сайта</li>
+                            <li><span>&lt;footer&gt;&lt;/footer&gt;</span> - самый конец(подвал) сайта в нем обычно
+                                располагают контактные данные, кто создал сайт и др.</li>
+                            <li><span>&lt;div&gt;&lt;/div&gt;</span> - блочный контейнер без смысловой нагрузки
+                                используется везде где нельзя использовать другие теги</li>
+                            <li><span>&lt;span&gt;&lt;/span&gt;</span> - строчный тег без смысловой нагрузки
+                                используется для изменения оформления части строки или слова</li>
+                            <li><span>&lt;p&gt;&lt;/p&gt;</span> - блочный тег параграф</li>
+                            <!-- &lt; и &gt; -->
+                            <li><span>&lt;h1&gt;&lt;/h1&gt;</span> - заголовок первого уровня (всего их 6 уровней и 1
+                                должен быть один на страницу)</li>
+                            <li><span>&lt;title&gt;&lt;/title&gt;</span> - заголовок страницы помещается в head</li>
+                            <li><span>&lt;ul&gt;&lt;/ul&gt;</span> - маркированный список (используется с li)</li>
+                            <li><span>&lt;ol&gt;&lt;/ol&gt;</span> - нумерованный список (используется с li)</li>
+                            <li><span>&lt;li&gt;&lt;/li&gt;</span> - элемент списка</li>
+                            <li><span>&lt;b&gt;&lt;/b&gt;</span>- делает текст <b>жирным</b></li>
+                            <li><span>&lt;em&gt;&lt;/em&gt;</span> - делает текст <em>курсивным</em></li>
+                            <li><span>&lt;big&gt;&lt;/big&gt;</span> - делает текст <big>большим</big></li>
+                            <li><span>&lt;small&gt;&lt;/small&gt;</span> - делает текст <small>маленьким</small></li>
+                            <li><span>&lt;br&gt;</span> - делает перенос текста на новую строку (не закрывается)</li>
+                            <li><span>&lt;a href="путь до ссылки" target="_blank"&gt;&lt;/a&gt;</span> - создаёт <a
+                                    target="_blank" href="#">ссылку</a>
+                                на сайт или на объект (картинку, пункт навигации и др.) <br>
+                                <span>target="_blank"</span> - атрибут
+                                открытия новой вкладки при
+                                переходе по ссылке</li>
+                            <li><span>&lt;img src="путь к изображению" alt="альтернативный текст"&gt;</span> - тег
+                                добавления картинки (не закрывается)
+                            </li>
+                            <li><span>&lt;style&gt;&lt;/style&gt;</span> - без подключения файла позволяет добавить CSS
+                                стили на страницу (лучше не использовать)</li>
+                            <li class="mb-3"><span>&lt;table border="1" width="100%"
+                                    height="300"&gt;&lt;/table&gt;</span> - создает
+                                границы
+                                таблицы <br>
+                                border="1" - обводка границ таблицы
+                                width="100%" - ширина таблицы
+                                height="300" - высота таблицы
+                                <br><br>
+                                <span>Теги для построяния таблиц:</span>
+                                <ol>
+
+                                    <li><span>&lt;tr&gt;&lt;/tr&gt;</span> - строки таблицы</li>
+                                    <li><span>&lt;th&gt;&lt;/th&gt;</span> - заголовок таблицы</li>
+                                    <li><span>&lt;td&gt;&lt;/td&gt;</span> - ячейка таблицы <br></li>
+                                </ol>
+                                <br>
+                                <span>Пример работы с таблицей:</span>
+                                <div class="table mt-4">
+
+                                    <img src="../img/lessonTwo_photo1.png" width="400" height="400" alt="">
+
+                                    <table border="3" class="mt-5 mr-5" width="500" height="350">
+                                        <tr>
+                                            <th>&lt;th&gt;&lt;/th&gt; - заголовок 1</th>
+                                            <th>&lt;th&gt;&lt;/th&gt; - заголовок 2</th>
+                                        </tr>
+                                        <tr>
+                                            <td>&lt;td&gt;&lt;/td&gt; - ячейка 1</td>
+                                            <td>&lt;td&gt;&lt;/td&gt; - ячейка 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&lt;td&gt;&lt;/td&gt; - ячейка 3</td>
+                                            <td>&lt;td&gt;&lt;/td&gt; - ячейка 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&lt;td&gt;&lt;/td&gt; - ячейка 5</td>
+                                            <td>&lt;td&gt;&lt;/td&gt; - ячейка 6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&lt;td&gt;&lt;/td&gt; - ячейка 7</td>
+                                            <td>&lt;td&gt;&lt;/td&gt; - ячейка 8</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </li>
+
+
+
+                            <li><span>&lt;form action="#"&gt;&lt;/form&gt;</span> - создаёт границы формы (например
+                                формы
+                                обратной связи) <br>
+                                action="" - атрибут для серверного языка (back-end) для того, чтобы управлять данными
+                                полученными с формы
+                                <br><br>
+                                <span>В формы вставляются слудующие теги: </span>
+                                <ol>
+                                    <li>
+                                        <span>&lt;input type="text" name="text" placeholder="Введите ваше
+                                            имя"&gt;&lt;/input&gt;</span> - создание
+                                        разных
+                                        полей
+                                        ввода <br>
+                                        <span>Имеет слудующие атрибуты:</span>
+                                        <ol>
+                                            <li>type="значение" - атрибут типа сообщает браузеру к какому типу относится
+                                                элемент<br>
+                                                <span>данный атрибут имеет слудующие значения:</span>
+                                                <ul>
+                                                    <li>="text" - текстовое поле для ввода текста</li>
+                                                    <li>="password" - текстовое поле для ввода пароля</li>
+                                                    <li>="tel" - текстовое поле для ввода телефона</li>
+                                                    <li>="number" - числовое поле</li>
+                                                    <li>="radio" - радио кнопка (круг с точкой), чтобы работал в паре с
+                                                        другими радио
+                                                        кнопками надо им дать одинаковые имена (name="")</li>
+                                                    <li>="checkbox" - кнопка чекбокса (квадратик с галочкой), должно
+                                                        быть уникальное имя у каждого чекбокса</li>
+                                                    <li>="file" - кнопка добавить файл для пользователя</li>
+                                                    <li>="submit" - кнопка для конечной отправки данных с формы на
+                                                        сервер
+                                                        (используется с value="Отправить")</li>
+                                                    <li>="reset" - кнопка очистки формы</li>
+                                                </ul>
+                                            </li>
+                                            <li>name ="name" - атрибут имя input нужен серверу для обработки формы
+                                            </li>
+                                            <li>value="значение" - значение по умолчанию в полях</li>
+                                            <li>placeholder="значение" - полупрозрачная надпись подсказки для чего
+                                                преднозначено поле (напирмер "Введите ваше
+                                                имя")</li>
+                                        </ol>
+
+                                    </li>
+                                    <li><span>&lt;label for="id тега input"&gt;&lt;/label&gt;</span> - устонавливает
+                                        связь с
+                                        полем ввода (input) и сообщает, что тект помещённый в данный тег относится
+                                        именно к
+                                        данному полю (input)</li>
+                                    <li>
+                                        <span>&lt;select" multiple&gt;&lt;/select&gt;</span> - создаёт элемент
+                                        выпадающего списка
+                                        (работает только c option) <br>
+                                        <ul>
+                                            <li>multiple - атрибут создаёт сразу открытый список для выбора значения
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><span>&lt;option"&gt;&lt;/option&gt;</span> - элекмент входящий в выподающий
+                                        список (select)</li>
+
+                                </ol>
+                            </li>
+                            <li>
+                                <span>&lt;textarea name="" id="" cols="30" rows="10"
+                                    name="textarea"&gt;&lt;/textarea&gt;</span> - большое текстовое поле <br>
+                                <span>Имеет слудующие атрибуты:</span>
+                                <ol>
+                                    <li>cols="30" - количество колонок</li>
+                                    <li>rows="10" - количество строчек</li>
+                                </ol>
+                            </li>
+
+
+
+                        </ol>
+                        <span>Какие бывают атрибуты: (универсальные)</span>
+                        <ol class="mt-3">
+                            <li>style="CSS стили" - атрибут стилей можно вставлять css код</li>
+                            <li>width="значение" - изменить ширину элемента</li>
+                            <li>height="значение" - изменить высоту элемента</li>
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <hr>
+                <div class="col-5 mt-4 mb-5">
+
+                    <span>Пример работы с формой (следующая страка с помощью br для примера, потом будем делать красиво
+                        через CSS)</span>
+                    <form action="#">
+                        <br>
+                        <label for="text">Введите имя пользователя</label>
+                        <br>
+                        <input type="text" name="text" id="text" value="Дима" placeholder="Введите ваше имя">
+                        <br><br>
+                        <label for="password">Введите пароль пользователя</label>
+                        <br>
+                        <input type="password" name="password" id="password" placeholder="Введите пароль">
+                        <br><br>
+                        <label for="number">Введите числовое значение</label>
+                        <br>
+                        <input type="number" name="number" id="number" placeholder="Введите число">
+                        <br><br>
+                        <label for="tel">Введите телефонный номер</label>
+                        <br>
+                        <input type="tel" name="tel" id="tel" placeholder="Введите телефонный номер">
+                        <br><br>
+                        <label for="radio">Выбери таблетку</label>
+                        <br>
+                        <span style="color: red">Красная - </span><input type="radio" name="radio" id="radio">
+                        <span style="color: blue">Синяя - </span><input type="radio" name="radio" id="radio">
+                        <br><br>
+                        <label for="checkbox">Тут можно взять обе</label>
+                        <br>
+                        <span style="color: red">Красная - </span><input type="checkbox" name="radio" id="radio">
+                        <span style="color: blue">Синяя - </span><input type="checkbox" name="radio" id="radio">
+                        <br><br>
+
+                        <select>
+                            <option value="">Значение 1</option>
+                            <option value="">Значение 2</option>
+                            <option value="">Значение 3</option>
+                        </select>
+                        <br><br>
+                        <select multiple>
+                            <option value="">Значение 1</option>
+                            <option value="">Значение 2</option>
+                            <option value="">Значение 3</option>
+                            <option value="">Значение 4</option>
+                            <option value="">Значение 1</option>
+                        </select>
+                        <br><br>
+                        <label for="textarea">Введите ваше сообщение:</label><br>
+                        <textarea name="textarea" id="textarea" cols="40" rows="5"></textarea>
+                        <br><br>
+                        <label for="file">Закинь сюда файл</label>
+                        <input type="file" name="file" id="file">
+                        <br><br>
+                        <label for="reset">Сброс формы</label>
+                        <input type="reset" id="reset" name="reset" value="Сброс">
+                        <br><br>
+                        <label for="submit">А теперь всё это отправим на сервер</label>
+                        <input type="submit" id="submit" name="submit" value="Отправить">
+                    </form>
+                </div>
+                <div class="col-7">
+                    <img src="../img/lessonTwo_photo4.png" height="700" width="700" alt="">
+                    <img src="../img/lessonTwo_photo5.png" height="250" width="700" alt="">
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="mt-4">2. Метатеги (36 минута 17 секунда)</h2>
+                    <div class="distr mt-4">
+                        <ul>
+                            <li>мататеги (meta) - это теги размещённые в head на странице, они используются для
+                                индексирования поисковиками, эти теги описывают страницу с технической и визуальной
+                                стороны</li>
+                        </ul>
+
+                        <div class="tegs mt-5">Какие бывают метатеги:</div>
+                        <ol class="mt-3">
+                            <li><span>&lt;meta charset="UTF-8"&gt;&lt;/meta&gt;</span> - с данным атрибутом
+                                указывает к какой кадировке символьной будет относится страница</li>
+                            <li><span>&lt;meta name="description" content="Это моя первая страница
+                                    "&gt;&lt;/meta&gt;</span>
+                                - с значением description мы указываем описание страницы в выдаче поисковиков <br>
+                                Пример (выделено красным): <br>
+                                <img src="../img/lessonTwo_photo2.png" alt="фото примера">
+                            </li>
+                            <li><span>&lt;meta name="author" content="Andrey"&gt;&lt;/meta&gt;</span> - Тег который
+                                говорит
+                                о разработчике страницы</li>
+                            <li><span>&lt;meta name="keywords" content="сайт визитка, разработка сайтов под
+                                    ключ"&gt;&lt;/meta&gt;</span> - тег ключевые слова для поисковых запросов
+                                пользователя.
+                                (не актуален)</li>
+                            <li><span>&lt;meta name="robots" content="index, follow"&gt;&lt;/meta&gt;</span> - мета тег
+                                разрешающий
+                                роботам поисковых систем индексировать нашу страницу. <br>
+                                ="noindex" - разрешение роботу индексировать страницу <br>
+                                ="noindex" - запрет робботу индексировать страницу <br>
+                                ="follow" - разрешает следовать по ссылкам роботу <br>
+                                ="nofollow" - запрещает следовать по ссылкам роботу <br>
+                                ="all" - разрешаем и индексацию и следовать по ссылкам
+                            </li>
+                            <li><span>&lt;meta property="og:title" content="Это моя первая
+                                    страница"&gt;&lt;/meta&gt;</span> - описание для социальных сетей для пормирования
+                                рекламных постов <br>
+                                Пример (выделено красным): <br>
+                                <img src="../img/lessonTwo_photo3.png" alt="фото примера"></li>
+                        </ol>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home_work">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <h2>Домашнее задание:</h2>
+                    <ol>
+                        <li>Открыть макет в фотошоп, установить все нужные программы</li>
+                        <li>Перевести макет из фотошопа в скелет (HTML) документа</li>
+                        <li>Зарегистрироваться в Git и положить туда репозиторий</li>
+                        <li>Сдать ваше первое домашнее задание на проверку</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Полезные ссылки к уроку</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ol>
+                        <li><a href="http://htmlbook.ru/">Справочник по html и css</a></li>
+                        <li><a target="_blank" href="https://webref.ru/">Справочник по всему что связано с разработкой
+                                сайтов</a></li>
+                        <li><a target="_blank" href="https://codeguide.maxgraph.ru/">Еще один справочник по HTML и
+                                CSS</a></li>
+                        <li><a target="_blank"
+                                href="https://habr.com/ru/company/click/blog/492258/?ysclid=l41q0dc262">OpenGraph
+                                разметка</a> </li>
+                        <li><a target="_blank" href="https://github.com/">GitHub</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
